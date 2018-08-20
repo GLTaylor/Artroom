@@ -35,7 +35,7 @@ Artist.create! (
     {
       name: "Ren Hang",
       nationality: "Chinese",
-      biography: "",
+      biography: " ",
       birthday: "1987",
       deathday: "2017"
     },
@@ -61,7 +61,7 @@ Artist.create! (
     user: User.all.sample
   )
 
-  one.remote_photo_url = "_____"
+  one.remote_photo_url = "https://res.cloudinary.com/ginnywhx/image/upload/v1534777196/cgamkgygv2dg5znwc1fu.jpg"
   one.save!
 
   two = Artwork.create!(
