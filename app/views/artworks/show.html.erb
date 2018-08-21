@@ -5,9 +5,9 @@
 <p>Interest: <%= @artwork.interest %></p>
 <p><%= @artwork.description %></p>
 
-<%= link_to "Something else" %>
+<%= link_to "Something else" , root_path, class: "button-outline button-gray"%>
 <% if @user.present? %>
-<%= link_to "Hang in my room", user_path(@user), class: "button-outline button-gray"  %>
+<%= link_to "Hang in my room", user_path(@user), class: "button-outline button-pink"  %>
 <% else %>
 <%= link_to "Sign up to hang picture", new_user_session_path, class: "button-outline button-pink" %>
 <% end %>
