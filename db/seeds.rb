@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'json'
+
 Hanging.delete_all
 Artwork.delete_all
 Artist.delete_all
@@ -27,41 +29,49 @@ User.create!(
      email: "taylor@hotmail.com",
      user_name:  "GLTaylor",
      password: "123456",
+   },
+    {
+     email: "noah@example.com",
+     user_name:  "noah",
+     password: "123456",
    }
  ]
  )
 
-Artist.create! (
-    {
+  ren_hang = Artist.create!(
       name: "Ren Hang",
       nationality: "Chinese",
       biography: " ",
       birthday: "1987",
       deathday: "2017"
-    },
-    {
+  )
+  ren_hang.save!
+
+
+  ai_wei_wei = Artist.create!(
       name: "Ren Hang",
-      nationality: " ",
+      nationality: "Chinese",
       biography: " ",
-      birthday: " ",
-      deathday: " ",
-      location: " "
-   }
-)
+      birthday: "1987",
+      deathday: "2017"
+  )
+  ren_hang.save!
+
+
+
+
 
   one = Artwork.create!(
-    title: "",
-    description: "",
-    date: " ",
-    category: " ",
+    title: "Human Love",
+    description: "Young Chinese art photographer whose sensual images of the encounter between man and nature makes the Chinese government tremor.",
+    date: "2017",
+    category: "photograph",
     medium: " ",
     mood: "Wild",
     interest: "Eroticism",
-    image: " ",
-    user: User.all.sample
+    image: "https://res.cloudinary.com/ginnywhx/image/upload/v1534777196/cgamkgygv2dg5znwc1fu.jpg",
   )
-
-  one.remote_photo_url = "https://res.cloudinary.com/ginnywhx/image/upload/v1534777196/cgamkgygv2dg5znwc1fu.jpg"
+  one.artist = ren_hang
   one.save!
 
   two = Artwork.create!(
@@ -73,8 +83,7 @@ Artist.create! (
     mood: " ",
     interest: " ",
     image: " ",
-    user: User.all.sample
+    artist: Artist.second
   )
-
-  two.remote_photo_url = "____"
+  two.artist = ren_hang
   two.save!
