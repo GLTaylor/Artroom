@@ -1,3 +1,7 @@
+.button {
+  height: auto;
+  margin: 20px 0px;
+}
 
 .button-outline {
   border : solid 2px;
@@ -35,14 +39,14 @@
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
   left: -2px;
-  right: -1px;
+  right: -2px;
   opacity: 1;
 }
 
 .button-pink:focus::before {
   transition: 0.5s all ease;
   left: -2px;
-  right: -1px;
+  right: -2px;
   opacity: 1;
 }
 
