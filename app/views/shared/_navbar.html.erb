@@ -10,7 +10,7 @@
 
       <!-- Links when logged in -->
       <%= link_to "YOUR ROOM", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "LOG OUT", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" %>
     <% else %>
       <!-- Login link (when logged out) -->
       <%= link_to t(".sign_in", default: "LOG IN"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
