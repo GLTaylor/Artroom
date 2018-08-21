@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   # Pundit: white-list approach.
   after_action :verify_authorized, unless: :skip_pundit?
-  after_action :verify_policy_scoped, unless: :skip_pundit?
+  # after_action :verify_policy_scoped, unless: :skip_pundit?
 
 
   def configure_permitted_parameters
