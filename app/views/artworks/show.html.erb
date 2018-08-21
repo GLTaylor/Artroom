@@ -1,31 +1,38 @@
-<div class="container text-center">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-      <%= image_tag @artwork.image, class: "image-resize image-rounded"%>
-    </div>
-  </div>
-  <h1><%= @artwork.title %></h1>
-  <h3><%= @artwork.artist.name %></h3>
-  <p>Mood: <%= @artwork.mood %></p>
-  <p>Interest: <%= @artwork.interest %></p>
-  <p class="description-long text-justify"><%= @artwork.description %></p>
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-1 text-center">
-      <div class="button">
-        <%= link_to "Something else" , root_path, class: "button-outline button-gray"%>
+<div class="vertical-wrapper-white text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+        <%= image_tag @artwork.image, class: "image-resize image-rounded"%>
       </div>
     </div>
-    <div class="col-xs-12 col-sm-4 col-sm-offset-2 text-center">
-      <% if @user.present? %>
+    <div class="row">
+      <h1><%= @artwork.title %></h1>
+    </div>
+    <div class="row">
+      <h3><%= @artwork.artist.name %></h3>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+        <p class="description-long text-justify"><%= @artwork.description %></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-1 text-center">
         <div class="button">
-          <%= link_to "Hang in my room", user_path(@user), class: "button-outline button-pink"  %>
+          <%= link_to "Something else" , root_path, class: "button-outline button-gray"%>
         </div>
-      <% else %>
-        <div class="button">
-          <%= link_to "Sign up to hang picture", new_user_session_path, class: "button-outline button-pink" %>
-        </div>
-      <% end %>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-sm-offset-2 text-center">
+        <% if @user.present? %>
+          <div class="button">
+            <%= link_to "Hang in my room", user_path(@user), class: "button-outline button-pink"  %>
+          </div>
+        <% else %>
+          <div class="button">
+            <%= link_to "Sign up to hang picture", new_user_session_path, class: "button-outline button-pink" %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
-
 </div>
