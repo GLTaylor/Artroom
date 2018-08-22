@@ -7,6 +7,13 @@
 <div class="quiz-container">
   <div class="quiz-card">
     <p> A search form commeth... </p>
+    <%= form_tag artwork_path(:id), method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Submit!"
+    %>
+<% end %>
   </div>
 </div>
 
