@@ -9,4 +9,16 @@ class HangingsController < ApplicationController
     redirect_to user_path(@user)
   end
 
+  def update
+    @hanging = Hanging.find(params[:id])
+    p @hanging
+    head :ok
+  end
+
+  private
+
+  def hanging_params
+    params.require(:hanging).permit(:id, :top, :left)
+  end
+
 end

@@ -3,6 +3,8 @@
 
 <div class="ball-container">
   <% @user.hangings.each do |hanging| %>
-    <%= cl_image_tag hanging.artwork.image, class: "image-small image-rounded" %>
+    <%= cl_image_tag hanging.artwork.image, class: "image-small image-rounded artblock", data: {id: hanging.artwork.id} %>
   <% end %>
 </div>
+
+<p class="button-outline button-pink" id="save-room">Save my room</p>
