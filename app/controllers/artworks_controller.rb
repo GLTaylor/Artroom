@@ -4,15 +4,20 @@ class ArtworksController < ApplicationController
 
 
   def show
-    if params[:query].present?
-      sql_query = "\
-        artwork.mood @@ :query \
-        AND artwork.interest @@ :query \
-      "
-      @artwork = Artwork.find_by(sql_query, query: "%#{params[:query]}%")
-      authorize @artwork
+    if params[:mood].present? && params[:interest].present?
+      @artworks = Artwork.search_by_mood(params[:mood]).search_by_interest(params[:interest])
+      authorize @artworks
+    elsif params[:interest].present? && params[:mood] == ""
+      @artworks = Artwork.search_by_interest(params[:interest])
+      authorize @artworks
+    elsif params[:mood].present? && params[:interest] == ""
+      @artworks = Artwork.search_by_mood(params[:mood])
+      authorize @artworks
+    elsif params[:mood] == "" && params[:interest] == ""
+      @artworks = Artwork.all
+        authorize @artworks
     else
-      # This is a regular show page we want the user to see, after the search
+      #This is a regular show page we want the user to see, after the search
       @artwork = Artwork.find(params[:id])
       authorize @artwork
       if current_user.present?

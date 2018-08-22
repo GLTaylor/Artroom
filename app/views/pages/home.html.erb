@@ -6,14 +6,19 @@
 </div>
 <div class="quiz-container">
   <div class="quiz-card">
-    <p> A search form commeth... </p>
     <%= form_tag artwork_path(:id), method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
+    <%= text_field_tag :mood,
+      params[:mood],
       class: "form-control",
-      placeholder: "Submit!"
+      placeholder: "Mood?"
     %>
-<% end %>
+    <%= text_field_tag :interest,
+      params[:interest],
+      class: "form-control",
+      placeholder: "Interest?"
+      %>
+      <%= submit_tag "Submit" %>
+      <% end %>
   </div>
 </div>
 
