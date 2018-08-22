@@ -10,23 +10,24 @@
 
       <!-- Links when logged in -->
       <%= link_to "YOUR ROOM", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link" %>
-    <% else %>
-      <!-- Login link (when logged out) -->
-      <%= link_to t(".sign_in", default: "LOG IN"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link logout" %>
     <% end %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">YOUR ROOM</a></li>
-        <li><a href="#">LOG OUT</a></li>
-        <li><a href="#">Other one</a></li>
-      </ul>
+  <% if user_signed_in? %>
+    <div class="navbar-wagon-item hidden-md hidden-lg">
+      <div class="dropdown">
+        <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+          <li><%= link_to "YOUR ROOM", "#", class: "navbar-wagon-item navbar-wagon-link" %></li>
+          <li><%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "navbar-wagon-item navbar-wagon-link logout"  %></li>
+        </ul>
+      </div>
     </div>
-  </div>
+  <% else %>
+    <%= link_to t(".sign_in", default: "LOG IN"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+  <% end %>
+
 </div>
 
