@@ -2,5 +2,7 @@
 <%= @user.user_name %>
 
 <div class="ball-container">
-<div class="ball ball-style"></div>
+  <% @user.hangings.each do |hanging| %>
+    <%= cl_image_tag hanging.artwork.image, class: "image-small image-rounded" %>
+  <% end %>
 </div>
