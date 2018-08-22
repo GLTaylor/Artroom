@@ -33,7 +33,9 @@ User.create(
       nationality: "Chinese",
       biography: "Lush backgrounds and playful, provocative nudes characterize Ren Hang’s vibrant photography, which addresses the human form as both subject and medium of expression. Arranging bodies to create patterns and architectural forms, Ren subverted representation of the physical body with unexpected configurations of anatomy, often incorporating plant and animal life. Although Ren said his work was not intentionally political, his art confronts repression of sexuality and queer identities in mainstream Chinese culture, and he was arrested several times for its content. Throughout his career, Ren used an analog camera, shooting friends rather than models, and resisted ascribing meaning to his work. I don’t try to get a message across, I don’t give my works names, I don’t date them. I don’t want to instill them with any vocabulary. I don’t like to explain my photos or work as a whole.",
       birthday: "1987",
-      deathday: "2017"
+      deathday: "2017",
+      location: "Beijing, China",
+      image: "https://res.cloudinary.com/ginnywhx/image/upload/v1534929390/0_01_Ren_Hang_white_rabbit_gallery.jpg"
   )
 
   ai_wei_wei = Artist.create(

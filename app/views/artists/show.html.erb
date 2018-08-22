@@ -1,52 +1,58 @@
 <div class="artist-page">
   <div class="wrapper-gray">
-    <div class="container text-center">
-      <div class = "row card-head">
-        <div class="col-xs-12 col-sm-6 col-md-6 artist-profile">
-        <% if @artist.image.present? %>
+    <div class="container">
+      <div class = "row card-head text-center">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 artist-profile">
+          <% if @artist.image.present? %>
           <%=cl_image_tag @artist.image, height: 175, width: 175, crop: :fill, gravity: :face, :class => "avatar-circle-artist" %>
           <% end %>
+          <h1 class="artist-name"> <%= @artist.name %> </h1>
 
-        <h1 class="artist-name"> <%= @artist.name %> </h1>
-
-        <div class = "row">
-          <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 ">
           <ul class ="list-inline">
             <li>
               <p class = "artist-nationality"><%= @artist.nationality %></p>
             </li>
             <li>
-              <p class = "artist-dates"><%= @artist.birthday %> - <%= @artist.deathday %></p>
+              <% if @artist.deathday.present? %>
+              <p><%= @artist.birthday %> - <%= @artist.deathday %></p>
+              <% else %>
+              <p><%= @artist.birthday %> - Present</p>
+              <% end %>
             </li>
           </ul>
-        </div>
-
-
-
-          <h2 class = "artist-location"><%= @artist.location %></h2>
+          <p class = "artist-location"><%= @artist.location %></p>
         </div>
       </div>
 
+      <div class = "row card-description">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+         <p class = "artist-biography"><%= @artist.biography %></p>
+       </div>
+     </div>
 
-    <div class = "row card-description">
-        <p class = "artist-biography"><%= @artist.biography %></p>
-    </div>
+      <div class = "row card-description">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+         <p class = "artist-biography"><%= @artist.biography %></p>
+       </div>
+      </div>
 
 
 
-    </div>
-  </div>
 
+   </div>
+
+
+ </div>
+</div>
 
 <div class = "container">
-
+  <p><%= @artist.artworks.name %></p>
 </div>
 </div>
 
-<p><%= @artist.artworks.name %></p>
 
 </div>
 
 
 <!-- <h2><%= @artist.image %></p>
- -->
+-->
