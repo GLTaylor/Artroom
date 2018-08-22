@@ -148,7 +148,7 @@ six = Artwork.create(
     'Polke's link with painting's history clearly goes far beyond iconography. The two Lapis Lazuli he made for the Nimes exhibition, using a blue pigment prized in the Renaissance, participate in the new deal he has effected at the heart of abstract painting, confusing our received ideas of abstraction by peopling his canvases with puddles and stains suspended between form and informe, with images in the process of becoming, disclosed in part or not at all according to each viewer's fantasy.' (Jean-Pierre Criqui 'Clothes make the canvas - works of artist Sigmar Polke', quoted in ArtForum, November 1994). ",
     date: "1998",
     category: "Painting",
-    medium: "Tempera and resin on canvas ",
+    medium: "Tempera and resin on canvas",
     mood: "Poetic",
     interest: "Nature",
     image: "https://res.cloudinary.com/ginnywhx/image/upload/v1533904063/sigmar_polke_2.jpg",
@@ -156,4 +156,18 @@ six = Artwork.create(
 
   six.artist = sigmar_polke
   six.save
+
+  seven = Artwork.create(
+    title: "Dropping a Han Dynasty Urn",
+    description: "Dropping a Han Dynasty Urn, an early work by the artist, demonstrates his show-stopping conceptual brilliance, and desire to provoke controversy. Outside his mother's home in Beijing, he dropped and smashed a 2000-year old ceremonial urn. Not only did the artifact have considerable value (the artist paid the equivalent of several thousand US dollars for it), but symbolic and cultural worth. The Han dynasty is considered a defining moment in Chinese civilization. Understandably, antique dealers were outraged, calling Ai's work an act of desecration. Ai countered by saying that General Mao used to tell us that we can only build a new world if we destroy the old one. It was a provocative act of cultural destruction in reference to the erasure of cultural memory in Communist China, an anti-elite society that carefully monitored access to information, especially about its dynastic history. In its literal iconoclasm and spotlight on hypocrisy, this smashed vase embodies the central message Ai would continue to explore.",
+    date: "1995",
+    category: "Print",
+    medium: "Digital Print in three parts",
+    mood: "Wild",
+    interest: "Politics",
+    image: "https://res.cloudinary.com/ginnywhx/image/upload/v1534955744/f718b1423f8a2bd8dba35f9d3a3e80e1.jpg",
+  )
+
+  seven.artist = ai_wei_wei
+  seven.save
 
