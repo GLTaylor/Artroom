@@ -1,0 +1,73 @@
+<div class="artist-description">
+    <div class="wrapper-gray">
+      <div class="container">
+        <div class = "row text-center">
+          <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4 artist-profile">
+            <% if @artist.image.present? %>
+            <%=cl_image_tag @artist.image, height: 175, width: 175, crop: :fill, gravity: :face, :class => "avatar-artist" %>
+            <% end %>
+            <h1 class="artist-name"> <%= @artist.name %> </h1>
+
+            <ul class ="list-inline">
+              <li class ="list-inline">
+                <p class = "artist-nationality"><%= @artist.nationality %></p>
+              </li>
+              <li class ="list-inline">
+                <% if @artist.deathday.present? %>
+                <p><%= @artist.birthday %> - <%= @artist.deathday %></p>
+                <% else %>
+                <p><%= @artist.birthday %> - Present</p>
+                <% end %>
+              </li>
+            </ul>
+            <p class = "artist-location"><%= @artist.location %></p>
+          </div>
+        </div>
+
+        <div class = "row">
+          <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+           <p class = "artist-biography"><%= @artist.biography %></p>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
+ <div class = "artist-artworks">
+  <div class="wrapper-white">
+    <div class = "container display-artworks">
+      <h3 class ="artworks-title text-center">Artworks</h3>
+      <div class = "row artworks-show">
+        <% @artist.artworks.each do |artwork| %>
+        <div class= "col-xs-12 col-sm-4 col-md-4">
+          <div class="artwork-image-block">
+
+            <%= link_to artwork_path(artwork) do %>
+            <img class = "card-artworks" src = '<%=cl_image_path artwork.image %>', style = "position: center;"/>
+            <% end %>
+          </div>
+          <h4 class="card-title"><%= @artist.name %></h4>
+          <ul class="list-inline">
+            <li class="list-inline artwork-title">
+              <p><%= artwork.title %>,</p>
+            </li>
+            <li class="list-inline artwork-date">
+              <p><%= artwork.date %></p>
+            </li>
+          </ul>
+          <ul class = "list artwork-description">
+            <li class = "list artwork-category">
+              <p><strong>Category: </strong><%= artwork.category %></p>
+            </li>
+            <li class = "list artwork-medium">
+              <p><strong>Medium: </strong><%= artwork.medium %></p>
+            </li>
+          </ul>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
