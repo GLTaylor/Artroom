@@ -10,8 +10,12 @@ class HangingsController < ApplicationController
   end
 
   def update
-    @hanging = Hanging.find(params[:id])
-    p @hanging
+    p params
+    @hanging = Hanging.find(params[:query][:id])
+    authorize @hanging
+    @hanging.top = params[:query][:top]
+    @hanging.left = params[:query][:left]
+    @hanging.save
     head :ok
   end
 

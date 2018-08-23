@@ -1,9 +1,9 @@
 <h1>My room</h1>
 <%= @user.user_name %>
 
-<div class="ball-container">
+<div class="art-container">
   <% @user.hangings.each do |hanging| %>
-    <%= cl_image_tag hanging.artwork.image, class: "image-small image-rounded artblock", data: {id: hanging.artwork.id} %>
+    <%= cl_image_tag hanging.artwork.image, class: "image-small image-rounded artblock", data: { hangingid: hanging.id }, style: "position: absolute; top: "  + hanging.top.to_s + "px; left: " + hanging.left.to_s + "px" %>
   <% end %>
 </div>
 
