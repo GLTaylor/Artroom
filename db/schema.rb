@@ -48,6 +48,8 @@ ActiveRecord::Schema.define(version: 2018_08_23_152003) do
     t.bigint "artwork_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "left"
+    t.integer "top"
     t.index ["artwork_id"], name: "index_hangings_on_artwork_id"
     t.index ["user_id"], name: "index_hangings_on_user_id"
   end
