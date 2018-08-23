@@ -6,11 +6,13 @@
 </div>
 <div class="quiz-container">
   <div class="quiz-card">
-    <%= form_tag artwork_path(:id), method: :get do %>
-    <%= select_tag(:mood, options_for_select(['Poetic', 'Wild', 'Joyful', 'Humorous', 'Melancholy', 'Meh']), include_blank: "Mood?")%>
-    <%= select_tag(:interest, options_for_select(['Money', 'Nature',  'Tech', 'Death', 'Eroticism', 'Politics']), include_blank: "Interest?") %>
-      <%= submit_tag "Submit" %>
-      <% end %>
+    <div class="category-choices">
+      <%= form_tag artwork_path(:id), method: :get do %>
+      <%= select_tag(:mood, options_for_select(['Poetic', 'Wild', 'Joyful', 'Humorous', 'Melancholy', 'Meh']), include_blank: "Mood?")%>
+      <%= select_tag(:interest, options_for_select(['Money', 'Nature',  'Tech', 'Death', 'Eroticism', 'Politics']), include_blank: "Interest?") %>
+        <%= submit_tag "Submit", id: "submit-button-quiz" %>
+        <% end %>
+      </div>
   </div>
 </div>
 
