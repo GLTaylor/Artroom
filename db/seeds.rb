@@ -33,7 +33,9 @@ User.create(
       nationality: "Chinese",
       biography: "Lush backgrounds and playful, provocative nudes characterize Ren Hang’s vibrant photography, which addresses the human form as both subject and medium of expression. Arranging bodies to create patterns and architectural forms, Ren subverted representation of the physical body with unexpected configurations of anatomy, often incorporating plant and animal life. Although Ren said his work was not intentionally political, his art confronts repression of sexuality and queer identities in mainstream Chinese culture, and he was arrested several times for its content. Throughout his career, Ren used an analog camera, shooting friends rather than models, and resisted ascribing meaning to his work. I don’t try to get a message across, I don’t give my works names, I don’t date them. I don’t want to instill them with any vocabulary. I don’t like to explain my photos or work as a whole.",
       birthday: "1987",
-      deathday: "2017"
+      deathday: "2017",
+      location: "Beijing, China",
+      image: "https://res.cloudinary.com/ginnywhx/image/upload/v1534929390/0_01_Ren_Hang_white_rabbit_gallery.jpg"
   )
 
   ai_wei_wei = Artist.create(
@@ -162,7 +164,7 @@ six = Artwork.create(
     'Polke's link with painting's history clearly goes far beyond iconography. The two Lapis Lazuli he made for the Nimes exhibition, using a blue pigment prized in the Renaissance, participate in the new deal he has effected at the heart of abstract painting, confusing our received ideas of abstraction by peopling his canvases with puddles and stains suspended between form and informe, with images in the process of becoming, disclosed in part or not at all according to each viewer's fantasy.' (Jean-Pierre Criqui 'Clothes make the canvas - works of artist Sigmar Polke', quoted in ArtForum, November 1994). ",
     date: "1998",
     category: "Painting",
-    medium: "Tempera and resin on canvas ",
+    medium: "Tempera and resin on canvas",
     mood: "Poetic",
     interest: "Nature",
     image: "https://res.cloudinary.com/ginnywhx/image/upload/v1533904063/sigmar_polke_2.jpg",
@@ -200,3 +202,18 @@ eight = Arwork.create(
 
   eight.artist = ackroyd_harvey
   eight.save
+
+nine = Artwork.create(
+    title: "Dropping a Han Dynasty Urn",
+    description: "Dropping a Han Dynasty Urn, an early work by the artist, demonstrates his show-stopping conceptual brilliance, and desire to provoke controversy. Outside his mother's home in Beijing, he dropped and smashed a 2000-year old ceremonial urn. Not only did the artifact have considerable value (the artist paid the equivalent of several thousand US dollars for it), but symbolic and cultural worth. The Han dynasty is considered a defining moment in Chinese civilization. Understandably, antique dealers were outraged, calling Ai's work an act of desecration. Ai countered by saying that General Mao used to tell us that we can only build a new world if we destroy the old one. It was a provocative act of cultural destruction in reference to the erasure of cultural memory in Communist China, an anti-elite society that carefully monitored access to information, especially about its dynastic history. In its literal iconoclasm and spotlight on hypocrisy, this smashed vase embodies the central message Ai would continue to explore.",
+    date: "1995",
+    category: "Print",
+    medium: "Digital Print in three parts",
+    mood: "Wild",
+    interest: "Politics",
+    image: "https://res.cloudinary.com/ginnywhx/image/upload/v1534955744/f718b1423f8a2bd8dba35f9d3a3e80e1.jpg",
+  )
+
+  nine.artist = ai_wei_wei
+  nine.save
+
