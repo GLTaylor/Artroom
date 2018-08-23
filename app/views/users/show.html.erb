@@ -1,2 +1,39 @@
-<h1>My room</h1>
-<%= @user.user_name %>
+<div class="vertical-wrapper-room-white">
+  <div class="container">
+    <div class="row">
+      <% if @user == current_user %>
+        <div class="room-options">
+          <h1 class="room-title">My room</h1>
+          <div class="button-options">
+            <ul class="list-inline">
+              <li>
+                <p class="button-small button-gray button-margin" id="save-room">Save</p>
+              </li>
+              <li>
+                <p class="button-small button-pink button-margin"> Share</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <% else %>
+        <h1 class="room-title"><%= @user.user_name %>'s Room</h1>
+      <% end %>
+    </div>
+    <div class="row">
+      <div class="art-container">
+        <% @user.hangings.each do |hanging| %>
+          <div class="image-container image-small image-rounded artblock" style="position: absolute; top: <%= hanging.top.to_s %>%; left: <%= hanging.left.to_s %>%" data-hangingid ="<%= hanging.id %>">
+            <div class="art-image-hover">
+              <%= cl_image_tag hanging.artwork.image, class: "art-image"%>
+              <div class="artwork-hover">
+                <div class="artwork-link">
+                  <p class="button-artwork"><%= link_to "More details", artwork_path(hanging.artwork), class: "button-small button-gray" %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
