@@ -9,13 +9,16 @@ const artworks = document.querySelectorAll('.artblock');
                         });
   })
 
+
 const saveButton = document.getElementById('save-room');
-saveButton.addEventListener("click", (event) => {
-  const artworksNodes = document.querySelectorAll('.artblock');
-  artworksNodes.forEach((artwork) => {
-   updateCoordinates(artwork);
-  })
-})
+if (saveButton) {
+  saveButton.addEventListener("click", (event) => {
+    const artworksNodes = document.querySelectorAll('.artblock');
+    artworksNodes.forEach((artwork) => {
+     updateCoordinates(artwork);
+    })
+  });
+};
 
 const parentDivWidth = (childDiv) => {
   return childDiv.parentElement.clientWidth;
