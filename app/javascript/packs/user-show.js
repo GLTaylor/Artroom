@@ -5,7 +5,7 @@ const artworks = document.querySelectorAll('.artblock');
   artworks.forEach((artwork) => {
   let displaceart = displace(artwork, {
                           constrain: true,
-                          relativeTo: document.querySelector(".ball-container"),
+                          relativeTo: document.querySelector(".art-container"),
                         });
   })
 
@@ -17,6 +17,10 @@ saveButton.addEventListener("click", (event) => {
   })
 })
 
+const parentDivWidth = (childDiv) => {
+  return childDiv.parentElement.clientWidth;
+}
+
 const updateCoordinates = (artwork) => {
   fetch(`/hangings/${artwork.dataset.hangingid}`, {
     method: "PATCH",
@@ -25,8 +29,8 @@ const updateCoordinates = (artwork) => {
       "X-CSRF-Token": Rails.csrfToken()
     },
     body: JSON.stringify({ query: { id: artwork.dataset.hangingid,
-                        left: artwork.offsetLeft,
-                        top: artwork.offsetTop
+                        left: (artwork.offsetLeft / parentDivWidth(artwork)) * 100,
+                        top: (artwork.offsetTop / parentDivWidth(artwork)) * 100
                       } })
     });
 }
