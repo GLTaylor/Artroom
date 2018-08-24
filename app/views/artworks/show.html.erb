@@ -22,9 +22,10 @@
       <div class="col-xs-12 col-sm-4 col-sm-offset-1 text-center">
         <% if request.original_url.include?("id?") %>
           <div class="button">
-            <%= link_to "Something else" , root_path, class: "button-outline button-gray"%>
+            <%= link_to "Something else", artworks_path(mood: params[:mood], interest: params[:interest], next_index: params[:next_index] ), class: "button-outline button-gray" %>
           </div>
         <% end %>
+
       </div>
       <div class="col-xs-12 col-sm-4 col-sm-offset-2 text-center">
         <% if current_user.present? %>
