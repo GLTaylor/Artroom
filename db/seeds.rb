@@ -71,12 +71,12 @@ User.create(
   )
 
   ackroyd_harvey = Artist.create(
-      name: "Heather Ackroyd & Dan Harvey"
+      name: "Heather Ackroyd & Dan Harvey",
       nationality: "English",
       biography: "Heather Ackroyd and Dan Harvey (b. 1959/1959 England) are internationally acclaimed for creating multi-disciplinary works that intersect art, activism, architecture, biology, ecology and history. Referencing memory and time, nature and culture, urban political ecologies, anthropogenic climate change and environmental degradation, their time-based practice reveals an intrinsic bias towards process and event.  Processes of germination, growth and decay (organic and inorganic), erosion and deposition, feature in artworks that often evolve through extended research in response to people and place, interfacing their profound interest in local ecologies and global environmental concerns with socio-political paradigms. (From the artists' website)",
       birthday: "1959",
       deathday: ""
-    )
+  )
 
   one = Artwork.create(
     title: "Untitled",
@@ -183,7 +183,7 @@ seven = Artwork.create(
     medium: "Monofrequency lights, projection foil, haze machines, mirror foil, aluminium, and scaffolding",
     mood: "Joyful",
     interest: "Nature",
-    image: "assets/images/the_weather_project.jpg",
+    image: "https://res.cloudinary.com/ginnywhx/image/upload/v1535101225/the_weather_project.jpg",
   )
 
   seven.artist = olafur_eliasson
@@ -197,7 +197,7 @@ eight = Arwork.create(
     medium: "Chlorophyll, projection, grass",
     mood: "Joyful",
     interest: "Nature",
-    image: "images/grassterpiece.jpg",
+    image: "https://res.cloudinary.com/ginnywhx/image/upload/v1535101209/grassterpiece.jpg",
   )
 
   eight.artist = ackroyd_harvey

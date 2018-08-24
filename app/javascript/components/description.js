@@ -1,23 +1,29 @@
-const description = document.querySelector(".description-long");
+const description = document.querySelector('.description-long');
 
 if (description) {
-  const showChar = 100;
-  // const ellipsestext = "...";
-  // const moretext = "more";
-  // const lesstext = "less";
-  // description.each(function() {
-    let content = this.html();
+    const showChar = 300;
+    const ellipsestext = "...";
+    const moretext = '<i class="fas fa-glasses"></i>'
+    const lesstext = "less";
+    let content = description.innerHTML;
 
-      if(content.length > showChar) {
-        const c = content.substr(0, showChar);
-        const h = content.substr(showChar-1, content.length - showChar);
-        // const html = c + '<span>' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
-        h.style.display.hide;
+    if (content.length > showChar) {
+      const c = content.substr(0, showChar);
+      const h = content.substr(showChar, content.length - showChar);
+      const html = c + '<span class="ellipses-option ">' + ellipsestext + '</span><span class="expandable-text morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+      // h.style.display.hide;
+      description.innerHTML = html;
+    }
+}
 
-        // this.html(html);
-      }
+ const showMore = document.querySelector('.morelink');
+  showMore.addEventListener("click", (event) => {
+    a = document.querySelector(".expandable-text")
+    a.classList.toggle('morecontent');
+    b = document.querySelector(".ellipses-option")
+    b.classList.toggle('hide-me');
+    event.preventDefault();
+  });
 
-  }
-//if it's present, shorten it to 30 words
-//add an event listener on a button
-//toggle back and forth between the normal version and the 30 words version
+
+

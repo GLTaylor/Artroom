@@ -1,7 +1,10 @@
 a.morelink {
-  text-decoration:none;
+  text-decoration: none;
   outline: none;
 }
 .morecontent span {
+  display: none;
+}
+.hide-me {
   display: none;
 }
