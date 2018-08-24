@@ -78,6 +78,15 @@ User.create(
       deathday: ""
   )
 
+  jonathan_zawada = Artist.create(
+      name: "Jonathan Zawada",
+      nationality: "Australian",
+      biography: "Jonathan Zawada is a cross-discipline artist best known for his unique approach to art and design. Weaving both analogue and digital techniques, he displays the back and forth interplay between manual physical labour and disembodied digital processes.
+      Informed by his early roots in web design, coding and animation, Zawada’s art practice further evolved into graphic design, illustration and art direction serving clients like Bloomburg, Nike, and BMW and now includes object design, sculpture, video, installation and painting. (from the artist's website) ",
+      birthday: "1981",
+      deathday: ""
+  )
+
   one = Artwork.create(
     title: "Untitled",
     description: "Nudity and naturalism. Humanism and love. For Ren Hang, these universes are tightly intertwined and his photography mirrors that this might be a universal truth.",
@@ -216,4 +225,18 @@ nine = Artwork.create(
 
   nine.artist = ai_wei_wei
   nine.save
+
+twelve = Artwork.create(
+    title: "Lighting of the Sails: Metamathemagical",
+    description: "Jonathan Zawada, a former developer, uses light projections and technology to animate The Sydney Opera House for the 2018 Vivid Festival in Sydney. According to the artist, “‘Metamathemagical’ explored the creative act on both the human and the macro scale, from both an individual and a cosmic perspective. It explored themes derived from maths, science, the natural world and the abstract form. Australian flora, fauna, geology were at its core.”",
+    date: "2018",
+    category: "Technology",
+    medium: "Projection, light",
+    mood: "Joyful",
+    interest: "Tech",
+    image: "https://res.cloudinary.com/ginnywhx/image/upload/v1535108656/zawada_real.jpg",
+  )
+
+  twelve.artist = jonathan_zawada
+  twelve.save
 
