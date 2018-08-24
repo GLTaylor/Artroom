@@ -65,9 +65,10 @@
   color: $cerise !important;
 }
 
-.logout:hover {
-  color: #000000 !important;
-  background: transparent !important;
+.dropdown-toggle:hover{
+  color: $cerise;
+  text-decoration: none;
+  transition-duration: 0.7s;
 }
 .navbar-wagon-dropdown-menu:before {
   content: ' ';
