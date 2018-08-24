@@ -240,3 +240,8 @@ twelve = Artwork.create(
   twelve.artist = jonathan_zawada
   twelve.save
 
+thirteen = Artwork.create(
+    title:
+
+  )
+

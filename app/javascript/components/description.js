@@ -12,10 +12,10 @@ if (description) {
       const html = c + '<span class="ellipses-option ">' + ellipsestext + '</span><span class="expandable-text morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + readtext + '</a></span>';
       // h.style.display.hide;
       description.innerHTML = html;
-    }
-}
 
- const showMore = document.querySelector('.morelink');
+
+
+  const showMore = document.querySelector('.morelink');
   showMore.addEventListener("click", (event) => {
     a = document.querySelector(".expandable-text")
     a.classList.toggle('morecontent');
@@ -23,6 +23,7 @@ if (description) {
     b.classList.toggle('hide-me');
     event.preventDefault();
   });
-
+}
+}
 
 
