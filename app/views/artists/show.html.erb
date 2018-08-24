@@ -41,10 +41,13 @@
         <% @artist.artworks.each do |artwork| %>
         <div class= "col-xs-12 col-sm-4 col-md-4">
           <div class="artwork-image-block">
-
-            <%= link_to artwork_path(artwork) do %>
-            <img class = "card-artworks" src = '<%=cl_image_path artwork.image %>', style = "position: center;"/>
-            <% end %>
+            <%= cl_image_tag artwork.image, class: "card-artworks" %>
+            <div class="artwork-hover-light">
+              <div class="artwork-links">
+                <%= link_to "More" ,artwork_path(artwork), class: "button-small button-gray"%>
+                <%= link_to "Hang", "/artworks/#{artwork.id}/hangings", method: :post, class: "button-small button-pink"  %>
+              </div>
+            </div>
           </div>
           <h4 class="card-title"><%= @artist.name %></h4>
           <ul class="list-inline">
