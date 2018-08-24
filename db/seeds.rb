@@ -189,7 +189,7 @@ seven = Artwork.create(
   seven.artist = olafur_eliasson
   seven.save
 
-eight = Arwork.create(
+eight = Artwork.create(
     title: "Face To Face",
     description: "It takes a little more than a green thumb to turn grass into art, but British artists Heather Ackroyd and Dan Harvey are masters of photosynthetic photography. The duo creates living portraits by projecting negative images on vertical panels of grown grass, directing light in varying concentrations to different areas. The amount of light determines which patches become dark shades of green and which fade to yellowish hues. The result is an organic, biochemical grassterpiece.",
     date: "2012",

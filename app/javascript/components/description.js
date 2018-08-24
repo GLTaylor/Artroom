@@ -3,7 +3,7 @@ const description = document.querySelector('.description-long');
 if (description) {
     const showChar = 300;
     const ellipsestext = "...";
-    const moretext = '<i class="fas fa-glasses"></i>'
+    const moretext = '<i class="fab fa-readme"></i>'
     const lesstext = "less";
     let content = description.innerHTML;
 
