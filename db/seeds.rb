@@ -62,13 +62,12 @@ User.create(
       deathday: "2010"
   )
 
-<<<<<<< HEAD
   banksy = Artist.create(
       name: "Banksy",
       nationality: "British",
       biography: "Whether plastering cities with his trademark parachuting rat, painting imagined openings in the West Bank barrier in Israel, or stenciling “We’re bored of fish” above a penguins’ zoo enclosure, Banksy creates street art with an irreverent wit and an international reputation that precedes his anonymous identity. “TV has made going to the theatre seem pointless, photography has pretty much killed painting,” he says, “but graffiti has remained gloriously unspoilt by progress.” Banksy has gained his notoriety through a range of urban interventions, from modifying street signs and printing his own currency to illegally hanging his own works in institutions such as the Louvre and the Museum of Modern Art. Most often using spray paint and stencils, Banksy has crafted a signature, immediately identifiable graphic style—and a recurring cast of cops, soldiers, children, and celebrities—through which he critically examines contemporary issues of consumerism, political authority, terrorism, and the status of art and its display.",
       birthday: "",
-=======
+
   olafur_eliasson = Artist.create(
       name: "Olafur Eliasson",
       nationality: "Danish-Icelandic",
@@ -91,7 +90,6 @@ User.create(
       biography: "Jonathan Zawada is a cross-discipline artist best known for his unique approach to art and design. Weaving both analogue and digital techniques, he displays the back and forth interplay between manual physical labour and disembodied digital processes.
       Informed by his early roots in web design, coding and animation, Zawada’s art practice further evolved into graphic design, illustration and art direction serving clients like Bloomburg, Nike, and BMW and now includes object design, sculpture, video, installation and painting. (from the artist's website) ",
       birthday: "1981",
->>>>>>> master
       deathday: ""
   )
 
