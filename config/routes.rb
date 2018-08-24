@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :artworks, only: [:show] do
+  get "no_matches", to: "pages#no_matches"
+  resources :artworks, only: [:index, :show] do
     resources :hangings, only: [:create]
   end
   resources :users, only: [:show]
