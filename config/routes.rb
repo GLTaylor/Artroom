@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   end
   resources :users, only: [:show]
   resources :artists, only: [:show]
-  resources :hangings, only: [:update]
+  resources :hangings, only: [:update, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
