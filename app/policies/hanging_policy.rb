@@ -8,6 +8,10 @@ class HangingPolicy < ApplicationPolicy
     record.user == user
   end
 
+  def destroy?
+    update?
+  end
+
   class Scope < Scope
     def resolve
       scope.all
