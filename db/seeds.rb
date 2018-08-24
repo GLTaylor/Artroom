@@ -62,6 +62,14 @@ User.create(
       deathday: "2010"
   )
 
+  banksy = Artist.create(
+      name: "Banksy",
+      nationality: "British",
+      biography: "Whether plastering cities with his trademark parachuting rat, painting imagined openings in the West Bank barrier in Israel, or stenciling “We’re bored of fish” above a penguins’ zoo enclosure, Banksy creates street art with an irreverent wit and an international reputation that precedes his anonymous identity. “TV has made going to the theatre seem pointless, photography has pretty much killed painting,” he says, “but graffiti has remained gloriously unspoilt by progress.” Banksy has gained his notoriety through a range of urban interventions, from modifying street signs and printing his own currency to illegally hanging his own works in institutions such as the Louvre and the Museum of Modern Art. Most often using spray paint and stencils, Banksy has crafted a signature, immediately identifiable graphic style—and a recurring cast of cops, soldiers, children, and celebrities—through which he critically examines contemporary issues of consumerism, political authority, terrorism, and the status of art and its display.",
+      birthday: "",
+      deathday: ""
+  )
+
   one = Artwork.create(
     title: "Untitled",
     description: "Nudity and naturalism. Humanism and love. For Ren Hang, these universes are tightly intertwined and his photography mirrors that this might be a universal truth.",
@@ -170,4 +178,25 @@ six = Artwork.create(
 
   seven.artist = ai_wei_wei
   seven.save
+
+   ten = Artwork.create(
+    title: "The Son Of A Migrant From Syria ",
+    description: "The Son of a Migrant from Syria is a 2015 mural by graffiti artist Banksy. The mural was located in the Calais jungle, a nickname for the encampment near Calais, France, where migrants lived as they attempted to enter the United Kingdom. The artwork depicts the late Apple co-founder and former CEO Steve Jobs—the son of a Syrian migrant to the United States—as a traveling migrant.
+    During the European migrant crisis, many are fleeing war-torn Syria. Thousands of migrants, mostly from Syria, Afghanistan, and Eritrea, lived in a temporary camp nicknamed the Jungle near Calais, France. Banksy, an English-based artist and political activist, had previously donated pieces of his former installation Dismaland to help construct shelters in the camp.
+
+    In December 2015, Banksy revealed he had painted several graffiti works related to the migrant crisis, including a variation of Théodore Géricault's painting The Raft of the Medusa, depicting migrants on a raft waving towards a nearby luxury yacht. The Son of a Migrant from Syria depicts Jobs wearing a black polo neck and round glasses. He is standing while one hand holds a bag of his belongings over his shoulder and the other his original Macintosh computer. Jobs' depiction is derived from a 2006 photograph taken by Albert Watson's which was later used on the cover of Walter Isaacson's biography Steve Jobs.
+
+    In a rare public statement Banksy said: We're often led to believe migration is a drain on the country's resources, but Steve Jobs was the son of a Syrian migrant. Apple is the world's most profitable company, it pays over $7bn a year in taxes – and it only exists because they allowed in a young man from Homs.
+    Using Jobs as a representation of Syrian migrants became popular after a September 2015 tweet by David Galbraith, a technology professional, included a photograph of Jobs with the caption A Syrian migrants' child. Jobs' biological father, Abdulfattah John Jandali, was a student from an elite famility in Homs who met Jobs' mother, Joanne Schieble, while pursuing a PhD at the University of Wisconsin. He was adopted a few months after his birth by a couple from California. According to Isaacson, Jobs had little interest in his Syrian heritage. Issacon stated: When the Middle East would come up in conversation, the topic did not engage him or evoke his typical strong opinions, even after Syria was swept up in the 2011 Arab Spring uprisings.
+",
+    date: "2005",
+    category: "Mural",
+    medium: "  ",
+    mood: "Wild",
+    interest: "Politics",
+    image: "https://res.cloudinary.com/ginnywhx/image/upload/v1535118835/The_son_of_a_migrant_from_Syria.jpg",
+  )
+
+  ten.artist = ai_wei_wei
+  ten.save
 
