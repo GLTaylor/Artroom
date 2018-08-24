@@ -1,5 +1,7 @@
 import "bootstrap";
-import Rails from 'rails-ujs';
 import "packs/user-show";
-
+import Rails from 'rails-ujs';
 Rails.start();
+
+import "components/description.js";
+

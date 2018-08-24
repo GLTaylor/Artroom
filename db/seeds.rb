@@ -62,6 +62,31 @@ User.create(
       deathday: "2010"
   )
 
+  olafur_eliasson = Artist.create(
+      name: "Olafur Eliasson",
+      nationality: "Danish-Icelandic",
+      biography: "Olafur Eliasson’s art is driven by his interests in perception, movement, embodied experience, and feelings of self. He strives to make the concerns of art relevant to society at large. Art, for him, is a crucial means for turning thinking into doing in the world. Eliasson’s works span sculpture, painting, photography, film, and installation. Not limited to the confines of the museum and gallery, his practice engages the broader public sphere through architectural projects, interventions in civic space, arts education, policy-making, and issues of sustainability and climate change.(from artist's website)",
+      birthday: "1967",
+      deathday: ""
+  )
+
+  ackroyd_harvey = Artist.create(
+      name: "Heather Ackroyd & Dan Harvey",
+      nationality: "English",
+      biography: "Heather Ackroyd and Dan Harvey (b. 1959/1959 England) are internationally acclaimed for creating multi-disciplinary works that intersect art, activism, architecture, biology, ecology and history. Referencing memory and time, nature and culture, urban political ecologies, anthropogenic climate change and environmental degradation, their time-based practice reveals an intrinsic bias towards process and event.  Processes of germination, growth and decay (organic and inorganic), erosion and deposition, feature in artworks that often evolve through extended research in response to people and place, interfacing their profound interest in local ecologies and global environmental concerns with socio-political paradigms. (From the artists' website)",
+      birthday: "1959",
+      deathday: ""
+  )
+
+  jonathan_zawada = Artist.create(
+      name: "Jonathan Zawada",
+      nationality: "Australian",
+      biography: "Jonathan Zawada is a cross-discipline artist best known for his unique approach to art and design. Weaving both analogue and digital techniques, he displays the back and forth interplay between manual physical labour and disembodied digital processes.
+      Informed by his early roots in web design, coding and animation, Zawada’s art practice further evolved into graphic design, illustration and art direction serving clients like Bloomburg, Nike, and BMW and now includes object design, sculpture, video, installation and painting. (from the artist's website) ",
+      birthday: "1981",
+      deathday: ""
+  )
+
   one = Artwork.create(
     title: "Untitled",
     description: "Nudity and naturalism. Humanism and love. For Ren Hang, these universes are tightly intertwined and his photography mirrors that this might be a universal truth.",
@@ -157,7 +182,37 @@ six = Artwork.create(
   six.artist = sigmar_polke
   six.save
 
-  seven = Artwork.create(
+seven = Artwork.create(
+    title: "The weather project",
+    description: "The subject of the weather has long shaped the content of everyday conversation. The eighteenth-century writer Samuel Johnson famously remarked ‘It is commonly observed, that when two Englishmen meet, their first talk is of the weather; they are in haste to tell each other, what each must already know, that it is hot or cold, bright or cloudy, windy or calm.’ In The Weather Project, the fourth in the annual Unilever Series of commissions for the Turbine Hall, Olafur Eliasson takes this ubiquitous subject as the basis for exploring ideas about experience, mediation and representation.
+
+    In this installation, The Weather Project, representations of the sun and sky dominate the expanse of the Turbine Hall. A fine mist permeates the space, as if creeping in from the environment outside. Throughout the day, the mist accumulates into faint, cloud-like formations, before dissipating across the space. A glance overhead, to see where the mist might escape, reveals that the ceiling of the Turbine Hall has disappeared, replaced by a reflection of the space below. At the far end of the hall is a giant semi-circular form made up of hundreds of mono-frequency lamps. The arc repeated in the mirror overhead produces a sphere of dazzling radiance linking the real space with the reflection. Generally used in street lighting, mono-frequency lamps emit light at such a narrow frequency that colours other than yellow and black are invisible, thus transforming the visual field around the sun into a vast duotone landscape. (Tate Museum official description, www.tate.org.uk)",
+    date: "2003",
+    category: "Scuptural Installation",
+    medium: "Monofrequency lights, projection foil, haze machines, mirror foil, aluminium, and scaffolding",
+    mood: "Joyful",
+    interest: "Nature",
+    image: "https://res.cloudinary.com/ginnywhx/image/upload/v1535101225/the_weather_project.jpg",
+  )
+
+  seven.artist = olafur_eliasson
+  seven.save
+
+eight = Artwork.create(
+    title: "Face To Face",
+    description: "It takes a little more than a green thumb to turn grass into art, but British artists Heather Ackroyd and Dan Harvey are masters of photosynthetic photography. The duo creates living portraits by projecting negative images on vertical panels of grown grass, directing light in varying concentrations to different areas. The amount of light determines which patches become dark shades of green and which fade to yellowish hues. The result is an organic, biochemical grassterpiece.",
+    date: "2012",
+    category: "Photography",
+    medium: "Chlorophyll, projection, grass",
+    mood: "Joyful",
+    interest: "Nature",
+    image: "https://res.cloudinary.com/ginnywhx/image/upload/v1535101209/grassterpiece.jpg",
+  )
+
+  eight.artist = ackroyd_harvey
+  eight.save
+
+nine = Artwork.create(
     title: "Dropping a Han Dynasty Urn",
     description: "Dropping a Han Dynasty Urn, an early work by the artist, demonstrates his show-stopping conceptual brilliance, and desire to provoke controversy. Outside his mother's home in Beijing, he dropped and smashed a 2000-year old ceremonial urn. Not only did the artifact have considerable value (the artist paid the equivalent of several thousand US dollars for it), but symbolic and cultural worth. The Han dynasty is considered a defining moment in Chinese civilization. Understandably, antique dealers were outraged, calling Ai's work an act of desecration. Ai countered by saying that General Mao used to tell us that we can only build a new world if we destroy the old one. It was a provocative act of cultural destruction in reference to the erasure of cultural memory in Communist China, an anti-elite society that carefully monitored access to information, especially about its dynastic history. In its literal iconoclasm and spotlight on hypocrisy, this smashed vase embodies the central message Ai would continue to explore.",
     date: "1995",
@@ -168,6 +223,21 @@ six = Artwork.create(
     image: "https://res.cloudinary.com/ginnywhx/image/upload/v1534955744/f718b1423f8a2bd8dba35f9d3a3e80e1.jpg",
   )
 
-  seven.artist = ai_wei_wei
-  seven.save
+  nine.artist = ai_wei_wei
+  nine.save
+
+twelve = Artwork.create(
+    title: "Lighting of the Sails: Metamathemagical",
+    description: "Jonathan Zawada, a former developer, uses light projections and technology to animate The Sydney Opera House for the 2018 Vivid Festival in Sydney. According to the artist, “‘Metamathemagical’ explored the creative act on both the human and the macro scale, from both an individual and a cosmic perspective. It explored themes derived from maths, science, the natural world and the abstract form. Australian flora, fauna, geology were at its core.”",
+    date: "2018",
+    category: "Technology",
+    medium: "Projection, light",
+    mood: "Joyful",
+    interest: "Tech",
+    image: "https://res.cloudinary.com/ginnywhx/image/upload/v1535108656/zawada_real.jpg",
+  )
+
+  twelve.artist = jonathan_zawada
+  twelve.save
+
 
