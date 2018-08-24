@@ -1,12 +1,7 @@
-class ArtworkPolicy < ApplicationPolicy
-
-  def index?
-    true
-  end
-
+class ArtistPolicy < ApplicationPolicy
 
   def show?
-    true
+    user.present?
   end
 
   class Scope < Scope

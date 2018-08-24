@@ -1,0 +1,15 @@
+.no-text-decoration {
+  color: inherit;
+  transition: all .5s ease;
+}
+
+.no-text-decoration:hover {
+  color: $cerise;
+}
+
+.artwork-links {
+  padding: 20px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
