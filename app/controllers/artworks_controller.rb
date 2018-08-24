@@ -29,7 +29,7 @@ class ArtworksController < ApplicationController
       if index < @artworks.length
         @artwork = @artworks[index]
         index = index + 1
-        redirect_to artwork_path(@artwork.id, mood: params[:mood], interest: params[:interest], next_index: index)
+        redirect_to artwork_path(@artwork, mood: params[:mood], interest: params[:interest], next_index: index)
       else
         redirect_to no_matches_url
       end
