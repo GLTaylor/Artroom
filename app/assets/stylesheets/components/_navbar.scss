@@ -55,14 +55,20 @@
 .navbar-wagon-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
-  color: #999999 !important;
+  color: $black !important;
   font-size: 15px !important;
   line-height: 22px !important;
   padding: 10px 20px;
 }
 .navbar-wagon-dropdown-menu li > a:hover {
   background: transparent !important;
-  color: black !important;
+  color: $cerise !important;
+}
+
+.dropdown-toggle:hover{
+  color: $cerise;
+  text-decoration: none;
+  transition-duration: 0.7s;
 }
 .navbar-wagon-dropdown-menu:before {
   content: ' ';
