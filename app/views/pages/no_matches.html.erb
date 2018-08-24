@@ -1,0 +1,39 @@
+<div class="vertical-wrapper-white text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+        <%= image_tag "empty.jpg", class: "image-resize image-rounded"%>
+      </div>
+    </div>
+    <div class="row">
+      <h1>There's Nothing Left</h1>
+    </div>
+    <div class="row">
+      <br>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+        <p class="description-long text-justify">We've come to the end of our collection of artworks corresponding to your current self. Our collection is always growing and changing- return to us in the future when this feeling strikes you once more.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-1 text-center">
+        <div class="button">
+          <%= link_to "Back Home", "/", class: "button-outline button-gray" %>
+        </div>
+      </div>
+      <!-- <div class="col-xs-12 col-sm-4 col-sm-offset-2 text-center">
+        <% if @user.present? %>
+          <div class="button">
+            <%= link_to "Hang in my room", user_path(@user), class: "button-outline button-pink"  %>
+          </div>
+        <% else %>
+          <div class="button">
+            <%= link_to "Sign up to hang picture", new_user_session_path, class: "button-outline button-pink" %>
+          </div>
+        <% end %>
+      </div> -->
+    </div>
+  </div>
+</div>
+

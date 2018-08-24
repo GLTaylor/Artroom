@@ -27,7 +27,14 @@
               <%= cl_image_tag hanging.artwork.image, class: "art-image"%>
               <div class="artwork-hover">
                 <div class="artwork-link">
-                  <p class="button-artwork"><%= link_to "More details", artwork_path(hanging.artwork), class: "button-small button-gray" %></p>
+                  <ul>
+                    <li>
+                       <p class="button-artwork"><%= link_to "More details", artwork_path(hanging.artwork), class: "button-small button-gray" %></p>
+                    </li>
+                    <li>
+                      <p class="button"> <%= link_to "Delete", hanging_path(hanging), method: :delete, class: "button-small button-gray"  %></p>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
