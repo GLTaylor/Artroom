@@ -40,15 +40,19 @@
   }
 }
 
+.line-top {
+  margin-top: 10px;
+  border-top: solid 1px darkgray;
+}
+
 .facebook-sign:hover {
   background-color: #3652a0;
 }
 
-.link-forgot-gray {
+.link-gray {
   font-size: 15px;
-  padding-bottom: 10px;
   margin-bottom: 15px;
-  border-bottom: solid 1px lightgray;
+  color: gray;
   a {
     color: gray;
   }
