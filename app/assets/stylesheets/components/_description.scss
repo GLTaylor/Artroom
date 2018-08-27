@@ -1,0 +1,16 @@
+a.morelink {
+  text-decoration: none;
+  outline: none;
+  color: black;
+}
+
+a.morelink:hover {
+  color: $cerise;
+}
+
+.morecontent span {
+  display: none;
+}
+.hide-me {
+  display: none;
+}

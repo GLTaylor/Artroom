@@ -1,6 +1,8 @@
 import displace from 'displacejs';
 import Rails from 'rails-ujs';
 
+// Rails.start();
+
 const artworks = document.querySelectorAll('.artblock');
   artworks.forEach((artwork) => {
   let displaceart = displace(artwork, {
@@ -27,6 +29,7 @@ const parentDivWidth = (childDiv) => {
 const updateCoordinates = (artwork) => {
   fetch(`/hangings/${artwork.dataset.hangingid}`, {
     method: "PATCH",
+    credentials: "same-origin",
     headers: {
       "Content-Type": "application/json",
       "X-CSRF-Token": Rails.csrfToken()
