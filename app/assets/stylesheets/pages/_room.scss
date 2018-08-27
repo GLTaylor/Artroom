@@ -25,3 +25,69 @@
 .button-options ul {
   margin: 0;
 }
+
+#save-room {
+  padding: 13px 41px !important;
+  margin-right: 111px;
+}
+
+.share-icons:hover{
+  font-size: 21px;
+  transition: all 0.3s ease-in-out;
+}
+
+.link-icons {
+  margin-top: -14px;
+}
+
+.share {
+
+  width: 106px;
+  height: 43px;
+  border-radius: 80px;
+  padding: 10px 54px;
+  display: flex;
+  justify-content:space-around;
+
+  p {
+    margin: 13px;
+  }
+
+  span {
+    width: 200px;
+    display: inline-block;
+    position: absolute;
+    margin-top: -11px;
+    transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
+  }
+
+  nav {
+    font-size: 0;
+    display: flex;
+    justify-content:space-around;
+  }
+
+  a {
+    text-align: center;
+    overflow: hidden;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+    color: #999999;
+  }
+
+  &:hover, &.hover {
+    span {
+      opacity: 0;
+    }
+
+    a {
+      color: white;
+      font-size: 19px;
+  &:hover {
+    color: white;
+  }
+}
+}
+}
+

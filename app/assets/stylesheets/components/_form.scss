@@ -1,0 +1,20 @@
+.form-line {
+  background-color: whilte;
+  border: none;
+  box-shadow: none;
+  border-bottom: solid 1px gray;
+}
+
+.form-line:focus {
+  border-color: $cerise;
+  border-width: 2px;
+  box-shadow: none;
+}
+
+.card-form {
+  background-color: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  padding: 20px 20px;
+  border-radius: 3px;
+  margin-top: 30px;
+}
