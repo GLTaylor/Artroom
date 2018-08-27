@@ -5,15 +5,15 @@
   justify-content: center;
 }
 .quiz-card {
-  width: 64%;
-  height: 130px;
+  min-width: 58%;
+  min-height: 150px;
   background-color: #f4f4f4;
-  margin-top: -108px;
+  margin-top: -116px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 16px 20px 41px 0px rgba(0,0,0,0.31);
+  box-shadow: 16px 20px 41px 0px rgba(0, 0, 0, 0.31);
 }
 /* Dropdown Button */
 .dropbtn {
@@ -27,7 +27,7 @@
 .category-choices {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: column;
   margin: 20px 0;
 }
 
@@ -87,6 +87,7 @@
 }
 .dropdown:active {
     background-color: #f8f8f8
+
 }
 .dropdown.active:hover,
 .dropdown.active {
@@ -101,10 +102,7 @@
     box-shadow: none !important;
     outline: none !important;
 }
-.dropdown .select {
-    box-shadow: none !important;
-    outline: none !important;
-}
+
 .dropdown .dropdown-menu {
     position: absolute;
     background-color: #fff;
@@ -118,19 +116,20 @@
     max-height: 144px;
     overflow-y: auto;
     z-index: 9
+
 }
 .dropdown .dropdown-menu li {
     padding: 7px;
     transition: all .2s ease-in-out;
-    cursor: pointer
+    cursor: pointer;
 }
 .dropdown .dropdown-menu {
     padding: 0;
-    list-style: none
+    list-style: none;
 }
 .dropdown .dropdown-menu li:hover {
-    background-color: #f2f2f2
+    background-color: #f2f2f2;
 }
 .dropdown .dropdown-menu li:active {
-    background-color: #e2e2e2
+    background-color: #e2e2e2;
 }
