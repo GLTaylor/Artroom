@@ -41,11 +41,13 @@
               <div class="artwork-hover">
                 <div style="height: 50%">
                   <div id= "delete-option">
-                    <%= link_to "Delete", hanging_path(hanging), method: :delete, class: "button-small button-gray"  %>
+                    <%= link_to hanging_path(hanging), method: :delete, class: "button-gray-delete" do %>
+                    <i class="far fa-times-circle"></i>
+                    <% end %>
                   </div>
                 </div>
                     <div id= "more-details-option">
-                        <%= link_to "More details", artwork_path(hanging.artwork), class: "button-small button-gray" %>
+                        <%= link_to "More details", artwork_path(hanging.artwork), class: "button-small button-gray button-artwork " %>
                   </div>
               </div>
             </div>
