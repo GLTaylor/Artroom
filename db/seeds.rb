@@ -103,7 +103,7 @@ User.create(
     category: "Photography",
     medium: "Photography",
     mood: "poetic",
-    interest: "eroticism",
+    interest: "sexuality",
     image: "https://res.cloudinary.com/ginnywhx/image/upload/v1534777196/cgamkgygv2dg5znwc1fu.jpg"
   )
   one.artist = ren_hang
@@ -116,7 +116,7 @@ User.create(
     category: "Photography",
     medium: "Photography",
     mood: "wild",
-    interest: "eroticism",
+    interest: "sexuality",
     image: "https://res.cloudinary.com/ginnywhx/image/upload/v1534845390/ren_hang_2.jpg"
   )
   two.artist = ren_hang
