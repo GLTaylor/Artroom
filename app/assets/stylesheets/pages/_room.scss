@@ -25,3 +25,12 @@
 .button-options ul {
   margin: 0;
 }
+
+.example {
+  width: 100px;
+  height: 100px;
+  background-color: $cerise;
+  box-sizing: border-box;
+    -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}

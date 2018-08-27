@@ -22,7 +22,7 @@
     <div class="row">
       <div class="art-container">
         <% @user.hangings.each do |hanging| %>
-          <div class="image-container image-small image-rounded artblock" style="position: absolute; top: <%= hanging.top.to_s %>%; left: <%= hanging.left.to_s %>%" data-hangingid ="<%= hanging.id %>">
+          <div class="image-container image-rounded artblock" style="position: absolute; top: <%= hanging.top.to_s %>%; left: <%= hanging.left.to_s %>%; width: <%= hanging.width.to_s %>%" data-hangingid ="<%= hanging.id %>">
             <div class="art-image-hover">
               <%= cl_image_tag hanging.artwork.image, class: "art-image"%>
               <div class="artwork-hover">
