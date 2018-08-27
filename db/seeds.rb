@@ -62,13 +62,15 @@ User.create(
       deathday: "2010"
   )
 
-<<<<<<< HEAD
   banksy = Artist.create(
       name: "Banksy",
       nationality: "British",
       biography: "Whether plastering cities with his trademark parachuting rat, painting imagined openings in the West Bank barrier in Israel, or stenciling “We’re bored of fish” above a penguins’ zoo enclosure, Banksy creates street art with an irreverent wit and an international reputation that precedes his anonymous identity. “TV has made going to the theatre seem pointless, photography has pretty much killed painting,” he says, “but graffiti has remained gloriously unspoilt by progress.” Banksy has gained his notoriety through a range of urban interventions, from modifying street signs and printing his own currency to illegally hanging his own works in institutions such as the Louvre and the Museum of Modern Art. Most often using spray paint and stencils, Banksy has crafted a signature, immediately identifiable graphic style—and a recurring cast of cops, soldiers, children, and celebrities—through which he critically examines contemporary issues of consumerism, political authority, terrorism, and the status of art and its display.",
       birthday: "",
-=======
+      deathday: ""
+      )
+
+
   olafur_eliasson = Artist.create(
       name: "Olafur Eliasson",
       nationality: "Danish-Icelandic",
@@ -91,7 +93,6 @@ User.create(
       biography: "Jonathan Zawada is a cross-discipline artist best known for his unique approach to art and design. Weaving both analogue and digital techniques, he displays the back and forth interplay between manual physical labour and disembodied digital processes.
       Informed by his early roots in web design, coding and animation, Zawada’s art practice further evolved into graphic design, illustration and art direction serving clients like Bloomburg, Nike, and BMW and now includes object design, sculpture, video, installation and painting. (from the artist's website) ",
       birthday: "1981",
->>>>>>> master
       deathday: ""
   )
 
@@ -243,17 +244,36 @@ ten = Artwork.create(
 
     In a rare public statement Banksy said: We're often led to believe migration is a drain on the country's resources, but Steve Jobs was the son of a Syrian migrant. Apple is the world's most profitable company, it pays over $7bn a year in taxes – and it only exists because they allowed in a young man from Homs.
     Using Jobs as a representation of Syrian migrants became popular after a September 2015 tweet by David Galbraith, a technology professional, included a photograph of Jobs with the caption A Syrian migrants' child. Jobs' biological father, Abdulfattah John Jandali, was a student from an elite famility in Homs who met Jobs' mother, Joanne Schieble, while pursuing a PhD at the University of Wisconsin. He was adopted a few months after his birth by a couple from California. According to Isaacson, Jobs had little interest in his Syrian heritage. Issacon stated: When the Middle East would come up in conversation, the topic did not engage him or evoke his typical strong opinions, even after Syria was swept up in the 2011 Arab Spring uprisings.",
-    date: "2005",
+    date: "2015",
     category: "Mural",
-    medium: "  ",
+    medium: "Spray Paint",
     mood: "Wild",
     interest: "Politics",
-    image: "https://res.cloudinary.com/ginnywhx/image/upload/v1535118835/The_son_of_a_migrant_from_Syria.jpg",
+    image: "https://res.cloudinary.com/ginnywhx/image/upload/v1535118835/The_son_of_a_migrant_from_Syria.jpg"
   )
 
-  ten.artist = ai_wei_wei
+  ten.artist = banksy
   ten.save
 
+
+eleven = Artwork.create(
+  title: "One Nation Under CCTV",
+    description: "This work on Newman Street in London was painted on the wall of a building used by the Royal Mail. At the bottom right, a child in a red hooded sweatshirt, black shorts, and a grey backpack, is seen painting the phrase ONE NATION UNDER CCTV while being watched by a police officer and a dog at the bottom left.
+
+The mural was situated in the line of sight of a CCTV camera. In fact, Banksy managed to erect three stories of scaffolding under the cover of darkness to create the entire artwork in one night. This work aims to criticize the excessive surveillance (both from CCTV cameras in public spaces, as well as in other forms such as online) that has recently become a controversial issue both in the UK and abroad. Banksy has done other works that aim to tease security cameras, for instance by stenciling the words what are you looking at? on a blank wall faced by a CCTV camera.
+
+The Westminster City Council stated in October 2008 that the work would be painted over, regardless of the celebrity status of the artist, as it was illegal graffiti. The council stated that Banksy has no more right to paint graffiti than a child. Robert Davis, the chairman of the council planning committee told The Times, If we condone this then we might as well say that any kid with a spray can is producing art. The work was eventually painted over in April 2009.
+
+The condemning of street art as illegal vandalism, and its frequent removal, has been the focus of many other works by Banksy. But on the other hand, the fact that many of his works get removed shortly after their creation adds to the excitement and fanaticism that surrounds Banksy's work. Banksy biographer Will Ellsworth-Jones wrote in 2013 that Banksy is an artist who has got people running around the city desperate to see his work before it gets painted over.",
+    date: "2007",
+    category: "Mural",
+    medium: "Spray Paint",
+    mood: "Wild",
+    interest: "Politics",
+    image: "https://res.cloudinary.com/ginnywhx/image/upload/v1535120291/banksy_cctv.jpg"
+)
+eleven.artist = banksy
+eleven.save
 
 
 twelve = Artwork.create(
