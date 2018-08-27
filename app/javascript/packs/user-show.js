@@ -1,4 +1,3 @@
-// import displace from 'displacejs';
 import interact from 'interactjs';
 import Rails from 'rails-ujs';
 
