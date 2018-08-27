@@ -1,60 +1,60 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1&appId=847384205471698&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="vertical-wrapper-room-white">
   <div class="container">
     <div class="row">
       <% if @user == current_user %>
-        <div class="room-options">
-          <h1 class="room-title">My room</h1>
-          <div class="button-options">
-            <ul class="list-inline">
-              <li>
-
-                <div class="button-small button-gray button-margin text-center" id = "save-room">Save</div>
-
-              </li>
-              <li>
-
+      <div class="room-options">
+        <h1 class="room-title">My room</h1>
+        <div class="button-options">
               <div class="share button-small button-pink button-margin text-center">
-                <span><p>Share</p></span>
+                <span><p>SHARE</p></span>
                 <nav>
-                  <a href="https://www.twitter.com"><i class="fa fa-twitter"></i></a>
-                  <a href="https://www.facebook.com"><i class="fa fa-facebook"></i></a>
-                  <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
-                </nav>
-              </div>
-
+                  <div class="link-fb">
+                 <p><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.artroom.fun%2Fusers%2F10&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" data-href="http://www.artroom.fun/users/current_user.id" data-layout="button_count" data-size="small" data-mobile-iframe="true"><i class="fa fa-facebook icon-facebook"></i></a></p>
+               </div>
+                 <div class="link-twitter">
+                 <p><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false"><i class="fa fa-twitter icon-twitter"></i></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+                  </div>
+               </nav>
+             </div>
+       </div>
+     </div>
+     <% else %>
+     <h1 class="room-title"><%= @user.user_name %>'s Room</h1>
+     <% end %>
+   </div>
+   <div class="row">
+    <div class="art-container">
+      <% @user.hangings.each do |hanging| %>
+      <div class="image-container image-small image-rounded artblock" style="position: absolute; top: <%= hanging.top.to_s %>%; left: <%= hanging.left.to_s %>%" data-hangingid ="<%= hanging.id %>">
+        <div class="art-image-hover">
+          <%= cl_image_tag hanging.artwork.image, class: "art-image"%>
+          <div class="artwork-hover">
+            <div class="artwork-link">
+              <ul>
+                <li>
+                 <p class="button-artwork"><%= link_to "More details", artwork_path(hanging.artwork), class: "button-small button-gray" %></p>
+               </li>
+               <li>
+                <p class="button"> <%= link_to "Delete", hanging_path(hanging), method: :delete, class: "button-small button-gray"  %></p>
               </li>
             </ul>
           </div>
         </div>
-      <% else %>
-        <h1 class="room-title"><%= @user.user_name %>'s Room</h1>
-      <% end %>
-    </div>
-    <div class="row">
-      <div class="art-container">
-        <% @user.hangings.each do |hanging| %>
-          <div class="image-container image-small image-rounded artblock" style="position: absolute; top: <%= hanging.top.to_s %>%; left: <%= hanging.left.to_s %>%" data-hangingid ="<%= hanging.id %>">
-            <div class="art-image-hover">
-              <%= cl_image_tag hanging.artwork.image, class: "art-image"%>
-              <div class="artwork-hover">
-                <div class="artwork-link">
-                  <ul>
-                    <li>
-                       <p class="button-artwork"><%= link_to "More details", artwork_path(hanging.artwork), class: "button-small button-gray" %></p>
-                    </li>
-                    <li>
-                      <p class="button"> <%= link_to "Delete", hanging_path(hanging), method: :delete, class: "button-small button-gray"  %></p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        <% end %>
       </div>
     </div>
+    <% end %>
   </div>
+</div>
+</div>
 </div>

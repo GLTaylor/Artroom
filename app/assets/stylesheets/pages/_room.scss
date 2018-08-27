@@ -31,87 +31,73 @@
   margin-right: 111px;
 }
 
-
-.share {
-      position: absolute;
-    width: 106px;
-    height: 43px;
-    margin-left: -111px;
-    margin-top: -27px;
-    border-radius: 80px;
-    padding: 10px 54px;
-
-  p {
-  margin: 13px;
+.fa-facebook:hover{
+  font-size: 21px;
+  transition: all 0.3s ease-in-out;
 }
 
+.fa-twitter:hover {
+  font-size: 21px;
+  transition: all 0.3s ease-in-out;
+
+}
+
+.link-twitter {
+  margin-top: -14px;
+}
+
+.link-fb {
+  margin-top: -14px;
+}
+
+.share {
+
+  width: 106px;
+  height: 43px;
+  border-radius: 80px;
+  padding: 10px 54px;
+  display: flex;
+  justify-content:space-around;
+
+  p {
+    margin: 13px;
+  }
 
   span {
-        width: 200px;
+    width: 200px;
     display: inline-block;
     position: absolute;
     margin-top: -11px;
-    margin-left: -100px;
     transition: opacity 0.3s ease-in-out;
     pointer-events: none;
   }
 
-
   nav {
     font-size: 0;
+    display: flex;
+    justify-content:space-around;
   }
 
   a {
-    // line-height: 32px;
-    // width: 15px;
     text-align: center;
     overflow: hidden;
     opacity: 1;
     transition: all 0.3s ease-in-out;
-    margin: 0 -20px;
-    // background-color: $buttonColor;
-    color: #F4F4F4;
+    color: #999999;
+  }
 
-    &:nth-child(1) {
-      margin-left: 0;
-
-      &:hover {
-        background-color: $twitter;
-        border-radius: 3px;
-      }
-    }
-
-    &:nth-child(2):hover {
-      background-color: $facebook;
-      border-radius: 3px;
-    }
-
-    &:nth-child(3){
-      margin-right: 0;
-
-    &:hover {
-      margin-right: 0;
-      background-color: $instagram;
-      border-radius: 3px;
-    }
-    }
-
-}
-
-&:hover, &.hover {
+  &:hover, &.hover {
     span {
       opacity: 0;
     }
 
     a {
-      color: blue;
-      font-size: 17px;
-
-      &:hover {
-        color: $hoverColor;
-      }
-    }
+      color: white;
+      font-size: 19px;
+  &:hover {
+    color: $hoverColor;
   }
-
+}
+}
 }
 
