@@ -99,4 +99,3 @@ const updateCoordinates = (artwork) => {
                       } })
     });
 }
-
