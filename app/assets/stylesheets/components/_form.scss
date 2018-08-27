@@ -1,5 +1,5 @@
 .form-line {
-  background-color: whilte;
+  background-color: white;
   border: none;
   box-shadow: none;
   border-bottom: solid 1px gray;
@@ -14,7 +14,40 @@
 .card-form {
   background-color: white;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  padding: 20px 20px;
-  border-radius: 3px;
-  margin-top: 30px;
+  border-radius: 10px;
+  max-width: 320px;
+  margin: 30px auto;
+}
+
+.form-container {
+  padding: 20px;
+}
+
+.facebook-sign {
+  background-color: #4060B8;
+  border-radius : 4px;
+  width: fit-content;
+  padding: 5px 10px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+.facebook-sign:hover {
+  background-color: #3652a0;
+}
+
+.link-forgot-gray {
+  color : gray;
+  font-size: 15px;
+}
+
+.link-forgot-gray:hover {
+
 }
