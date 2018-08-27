@@ -51,6 +51,31 @@
             </ul>
           </div>
         </div>
+      <% else %>
+        <h1 class="room-title"><%= @user.user_name %>'s Room</h1>
+      <% end %>
+    </div>
+    <div class="row">
+      <div class="art-container">
+        <% @user.hangings.each do |hanging| %>
+          <div class="image-container image-rounded artblock" style="position: absolute; top: <%= hanging.top.to_s %>%; left: <%= hanging.left.to_s %>%; width: <%= hanging.width.to_s %>%" data-hangingid ="<%= hanging.id %>">
+            <div class="art-image-hover">
+              <%= cl_image_tag hanging.artwork.image, class: "art-image"%>
+              <div class="artwork-hover">
+                <div class="artwork-link">
+                  <ul>
+                    <li>
+                       <p class="button-artwork"><%= link_to "More details", artwork_path(hanging.artwork), class: "button-small button-gray" %></p>
+                    </li>
+                    <li>
+                      <p class="button"> <%= link_to "Delete", hanging_path(hanging), method: :delete, class: "button-small button-gray"  %></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
     <% end %>

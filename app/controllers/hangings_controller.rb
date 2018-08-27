@@ -5,7 +5,7 @@ class HangingsController < ApplicationController
 
   def create
     @artwork = Artwork.find(params[:artwork_id])
-    @hanging = Hanging.new(user: @user, artwork: @artwork, left: 0, top: 0)
+    @hanging = Hanging.new(user: @user, artwork: @artwork, left: 0, top: 0, width: 20)
     authorize @hanging
     @hanging.save
     redirect_to user_path(@user)
@@ -15,8 +15,9 @@ class HangingsController < ApplicationController
     p params
     @hanging = Hanging.find(params[:query][:id])
     authorize @hanging
-    @hanging.top = params[:query][:top]
-    @hanging.left = params[:query][:left]
+    @hanging.top += params[:query][:top]
+    @hanging.left += params[:query][:left]
+    @hanging.width = params[:query][:width]
     @hanging.save
     head :ok
   end
@@ -35,7 +36,7 @@ class HangingsController < ApplicationController
   end
 
   def hanging_params
-    params.require(:hanging).permit(:id, :top, :left)
+    params.require(:hanging).permit(:id, :top, :left, :width)
   end
 
 end
