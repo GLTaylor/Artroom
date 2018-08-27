@@ -69,7 +69,7 @@ User.create(
       birthday: "",
       deathday: ""
       )
-
+)
 
   olafur_eliasson = Artist.create(
       name: "Olafur Eliasson",
