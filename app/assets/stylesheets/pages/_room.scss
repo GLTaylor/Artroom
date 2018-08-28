@@ -22,13 +22,19 @@
   align-items: center;
 }
 
+.button-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .button-options ul {
   margin: 0;
 }
 
 #save-room {
   padding: 13px 41px !important;
-  margin-right: 111px;
+  cursor: pointer;
 }
 
 .share-icons:hover{

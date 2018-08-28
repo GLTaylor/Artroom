@@ -1,6 +1,4 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
@@ -12,48 +10,27 @@
 <div class="vertical-wrapper-room-white">
   <div class="container">
     <div class="row">
-      <% if @user == current_user %>
       <div class="room-options">
+      <% if @user == current_user %>
         <h1 class="room-title">My room</h1>
-        <div class="button-options">
-              <div class="share button-small button-pink button-margin text-center">
-                <span><p>SHARE</p></span>
-                <nav>
-                  <div class="link-icons">
-                 <p><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.artroom.fun%2Fusers%2F10&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" data-href="http://www.artroom.fun/users/current_user.id" data-layout="button_count" data-size="small" data-mobile-iframe="true"><i class="fa fa-facebook share-icons"></i></a></p>
-               </div>
-                 <div class="link-icons">
-                 <p><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false"><i class="fa fa-twitter share-icons"></i></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
-                  </div>
-               </nav>
-             </div>
-       </div>
-     </div>
-     <% else %>
-     <h1 class="room-title"><%= @user.user_name %>'s Room</h1>
-     <% end %>
-   </div>
-   <div class="row">
-    <div class="art-container">
-      <% @user.hangings.each do |hanging| %>
-      <div class="image-container image-small image-rounded artblock" style="position: absolute; top: <%= hanging.top.to_s %>%; left: <%= hanging.left.to_s %>%" data-hangingid ="<%= hanging.id %>">
-        <div class="art-image-hover">
-          <%= cl_image_tag hanging.artwork.image, class: "art-image"%>
-          <div class="artwork-hover">
-            <div class="artwork-link">
-              <ul>
-                <li>
-                 <p class="button-artwork"><%= link_to "More details", artwork_path(hanging.artwork), class: "button-small button-gray" %></p>
-               </li>
-               <li>
-                <p class="button"> <%= link_to "Delete", hanging_path(hanging), method: :delete, class: "button-small button-gray"  %></p>
-              </li>
-            </ul>
-          </div>
-        </div>
       <% else %>
         <h1 class="room-title"><%= @user.user_name %>'s Room</h1>
       <% end %>
+        <div class="button-options">
+          <p id="save-room" class="button-small button-gray button-margin">SAVE</p>
+          <div class="share button-small button-pink button-margin text-center">
+            <span><p>SHARE</p></span>
+            <nav>
+            <div class="link-icons">
+             <p><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.artroom.fun%2Fusers%2F10&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore" data-href="http://www.artroom.fun/users/current_user.id" data-layout="button_count" data-size="small" data-mobile-iframe="true"><i class="fab fa-facebook-f share-icons"></i></a></p>
+            </div>
+            <div class="link-icons">
+             <p><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-show-count="false"><i class="fab fa-twitter share-icons"></i></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+            </div>
+           </nav>
+         </div>
+       </div>
+     </div>
     </div>
     <div class="row">
       <div class="art-container">
@@ -62,24 +39,22 @@
             <div class="art-image-hover">
               <%= cl_image_tag hanging.artwork.image, class: "art-image"%>
               <div class="artwork-hover">
-                <div class="artwork-link">
-                  <ul>
-                    <li>
-                       <p class="button-artwork"><%= link_to "More details", artwork_path(hanging.artwork), class: "button-small button-gray" %></p>
-                    </li>
-                    <li>
-                      <p class="button"> <%= link_to "Delete", hanging_path(hanging), method: :delete, class: "button-small button-gray"  %></p>
-                    </li>
-                  </ul>
+                <div style="height: 50%">
+                  <div id= "delete-option">
+                    <%= link_to hanging_path(hanging), method: :delete, class: "button-gray-delete" do %>
+                    <i class="far fa-times-circle"></i>
+                    <% end %>
+                  </div>
                 </div>
+                    <div id= "more-details-option">
+                        <%= link_to "More details", artwork_path(hanging.artwork), class: "button-small button-gray button-artwork " %>
+                  </div>
               </div>
             </div>
           </div>
         <% end %>
       </div>
     </div>
-    <% end %>
   </div>
 </div>
-</div>
-</div>
+

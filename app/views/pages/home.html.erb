@@ -8,9 +8,40 @@
   <div class="quiz-card">
     <div class="category-choices">
     <%= form_tag artworks_path, method: :get do %>
-    <%= select_tag(:mood, options_for_select(['Poetic', 'Wild', 'Joyful', 'Humorous', 'Melancholy', 'Meh']), include_blank: "Mood?")%>
-    <%= select_tag(:interest, options_for_select(['Money', 'Nature',  'Tech', 'Death', 'Eroticism', 'Politics']), include_blank: "Interest?") %>
-      <%= submit_tag "Submit", id: "submit-button-quiz" %>
+
+    <div class="dropdown">
+      <div class="select">
+        <span>Mood?</span>
+        <i class="fa fa-chevron-left"></i>
+      </div>
+      <%= hidden_field_tag(:mood)%>
+      <ul class="dropdown-menu">
+        <li id="poetic">Poetic</li>
+        <li id="wild">Wild</li>
+        <li id="joyful">Joyful</li>
+        <li id="humorous">Humorous</li>
+        <li id="melancholy">Melancholy</li>
+        <li id="meh">Meh</li>
+      </ul>
+    </div>
+
+    <div class="dropdown">
+      <div class="select">
+        <span>Interest?</span>
+        <i class="fa fa-chevron-left"></i>
+      </div>
+      <%= hidden_field_tag(:interest)%>
+      <ul class="dropdown-menu">
+        <li id="humanity">Humanity</li>
+        <li id="Nature">Nature</li>
+        <li id="tech">Tech</li>
+        <li id="death">Death</li>
+        <li id="sexuality">Sexuality</li>
+        <li id="politics">Politics</li>
+      </ul>
+    </div>
+
+      <%= submit_tag "Discover", id: "submit-button-quiz" %>
         <% end %>
     </div>
   </div>
