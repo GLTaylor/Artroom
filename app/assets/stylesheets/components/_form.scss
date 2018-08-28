@@ -6,9 +6,26 @@
 }
 
 .form-line:focus {
-  border-color: $cerise;
+  border-color: $blue;
   border-width: 2px;
   box-shadow: none;
+}
+.form-title {
+  background: asset-url('polke.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 10px 0;
+  border-radius : 10px 10px 0 0;
+}
+
+.form-title h2 {
+  margin: 10px 20px;
+  color: white;
+  font-family: $body-font;
+}
+
+.icon-margin {
+  margin-left: 5px;
 }
 
 .card-form {
@@ -40,6 +57,12 @@
   }
 }
 
+.label-gray {
+  color: gray;
+  font-size: 15px;
+  padding-top: 1px;
+}
+
 .line-top {
   margin-top: 10px;
   border-top: solid 1px darkgray;
@@ -61,4 +84,15 @@
     color : darkgray;
   }
 }
+
+.input-margin {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.form-actions {
+  margin: 10px 0px;
+  margin-bottom: 20px;
+}
+
 

@@ -1,3 +1,18 @@
+.login-button {
+  background-color: $white;
+  border: solid 1px $blue;
+  border-radius: 5px;
+  font-size: 17px;
+  padding: 5px 10px;
+  color: $blue;
+  transition: all .3s ease-in;
+}
+
+.login-button:hover {
+  background-color: $blue;
+  color: white;
+}
+
 .button {
   height: auto;
   margin: 20px 0px;
