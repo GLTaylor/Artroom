@@ -5,6 +5,7 @@ class Artwork < ApplicationRecord
   validates :image, presence: true
   validates :mood, presence: true
   validates :interest, presence: true
+  mount_uploader :image, PhotoUploader
 
   include PgSearch
   pg_search_scope :search_by_mood, against: [ :mood ]
