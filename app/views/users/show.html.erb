@@ -13,10 +13,7 @@
       <div class="room-options">
       <% if @user == current_user %>
         <h1 class="room-title">My room</h1>
-      <% else %>
-        <h1 class="room-title"><%= @user.user_name %>'s Room</h1>
-      <% end %>
-        <div class="button-options">
+                <div class="button-options">
           <p id="save-room" class="button-small button-gray button-margin">SAVE</p>
           <div class="share button-small button-pink button-margin text-center">
             <span><p>SHARE</p></span>
@@ -30,6 +27,9 @@
            </nav>
          </div>
        </div>
+      <% else %>
+        <h1 class="room-title"><%= @user.user_name %>'s Room</h1>
+      <% end %>
      </div>
     </div>
     <div class="row">
@@ -46,8 +46,9 @@
                     <% end %>
                   </div>
                 </div>
-                    <div id= "more-details-option">
-                        <%= link_to "More details", artwork_path(hanging.artwork), class: "button-small button-gray button-artwork " %>
+                    <div class= "more-details-option">
+                      <p class="button-small button-pink button-artwork"><%= link_to "Artwork", artwork_path(hanging.artwork) %></p>
+                      <p class="button-small button-gray button-artwork"><%= link_to "Artist", artist_path(hanging.artwork.artist)  %></p>
                   </div>
               </div>
             </div>

@@ -34,6 +34,10 @@
   margin-bottom: 10px;
 }
 
+.button-artwork:hover {
+  transform: scale(1.1);
+}
+
 .button-outline {
   border : solid 2px;
   border-radius: 50px;
@@ -51,62 +55,31 @@
   border-color: $cerise;
   color: $cerise;
   position: relative;
-  -webkit-transition:0.3s all ease;
-  transition:0.3s ease all;
-  &::before {
-    -webkit-transition:0.5s all ease;
-    transition:0.5s all ease;
-    position:absolute;
-    content: "";
-    top: 0;
-    left: 50%;
-    right: 50%;
-    bottom: 0;
-    opacity: 0;
-    border-radius: 50px;
-    background-color: $cerise;
-    z-index: -2;
+  -webkit-transition:0.4s all ease-in;
+  transition:0.4s ease-in all;
+
+  a {
+      color: $cerise;
   }
 }
 
 .button-pink:hover {
+  background-color: $cerise;
   color: $white;
+  a {
+    color: $white;
+  }
 }
 
-.button-pink:hover::before {
-  -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
-  left: -2px;
-  right: -2px;
-  opacity: 1;
-}
-
-.button-pink:focus::before {
-  transition: 0.5s all ease;
-  left: -2px;
-  right: -2px;
-  opacity: 1;
-}
 
 .button-gray {
   border-color: $dark-gray;
   color: $dark-gray;
   position: relative;
-  -webkit-transition:0.3s all ease;
-  transition:0.3s ease all;
-  &::before {
-    -webkit-transition:0.5s all ease;
-    transition:0.5s all ease;
-    position:absolute;
-    content: "";
-    top: 0;
-    left: 50%;
-    right: 50%;
-    bottom: 0;
-    opacity: 0;
-    border-radius: 50px;
-    background-color: $dark-gray;
-    z-index: -2;
+  -webkit-transition:0.4s all ease;
+  transition:0.4s ease all;
+  a {
+      color: $dark-gray;
   }
 }
 
@@ -126,20 +99,10 @@
 
 
 .button-gray:hover {
+  background-color: $dark-gray;
   color: $white;
+  a {
+    color: $white;
+  }
 }
 
-.button-gray:hover::before {
-  -webkit-transition: 0.5s all ease;
-  transition: 0.5s all ease;
-  left: -2px;
-  right: -1px;
-  opacity: 1;
-}
-
-.button-gray:focus::before {
-  transition: 0.5s all ease;
-  left: -2px;
-  right: -1px;
-  opacity: 1;
-}
