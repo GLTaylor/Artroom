@@ -5,10 +5,14 @@
         <%= cl_image_tag @artwork.image, class: "image-resize image-rounded"%>
       </div>
     </div>
-    <div class="row">
+    <div class="line-separator"></div>
+    <div class="row title">
       <h1><%= @artwork.title %></h1>
     </div>
-    <div class="row">
+    <div class="row date-and-name">
+      <h3><%= @artwork.date %></h1>
+    </div>
+    <div class="row date-and-name">
       <%= link_to artist_path(@artwork.artist), class: "no-text-decoration" do  %>
         <h3><%= @artwork.artist.name %></h3>
       <% end %>

@@ -13,3 +13,22 @@
   display: flex;
   justify-content: space-around;
 }
+
+.line-separator{
+  height: 1px;
+  background: #717171;
+  border-bottom: 1px solid #E0E0E0;
+  margin-top: 45px;
+  margin-bottom: 11px;
+}
+
+.title h1{
+  font-size: 30px;
+  text-align: left;
+}
+
+.date-and-name h3{
+  font-size: 19px;
+  text-align: left;
+  color: #C4C4C4;
+}
