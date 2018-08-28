@@ -43,9 +43,13 @@
 
 }
 
-#more-details-option {
+.more-details-option {
+  height: 50%;
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  flex: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
   }
 
 #delete-option {
