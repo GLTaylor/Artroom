@@ -25,7 +25,12 @@ class HangingsController < ApplicationController
   def destroy
     @hanging = Hanging.find(params[:id])
     authorize @hanging
-    @hanging.destroy
+    if @hanging.destroy
+      respond_to do |format|
+        format.html { redirect_to user_path(@user) }
+        format.js
+      end
+    end
   end
 
   private
