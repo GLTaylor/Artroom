@@ -26,6 +26,10 @@
   margin-bottom: 0;
 }
 
+.button-margin-10 {
+  margin-right: 10px
+}
+
 .button-artwork {
   margin-bottom: 10px;
 }
@@ -105,6 +109,21 @@
     z-index: -2;
   }
 }
+
+.button-gray-delete {
+  border-color: $dark-gray;
+  color: $dark-gray;
+  position: relative;
+  -webkit-transition:0.3s all ease;
+  transition:0.3s ease all;
+}
+
+.button-gray-delete:hover > i {
+    color: white;
+    transition: 0.9s;
+    transform: rotate(-90deg);
+}
+
 
 .button-gray:hover {
   color: $white;
