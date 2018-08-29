@@ -27,18 +27,9 @@
 .category-choices {
   display: flex;
   justify-content: space-around;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
   margin: 20px 0;
-}
-
-#submit-button-quiz {
-    font-size: 23px;
-    align-items: center;
-    background-color: #12384c;
-    border-radius: 24px;
-    color: #fff;
-    padding: 7px 24px;
-    margin: 0px 7px;
 }
 
 /*Styling Selectbox for those sleek dropdowns*/
@@ -53,8 +44,7 @@
   font-size: 15px;
   color: #474747;
   text-align: left;
-  margin: 9px;
-  margin-top: 0px;
+  margin: 0px 9px;
 }
 .dropdown .select {
     cursor: pointer;

@@ -1,20 +1,110 @@
 .form-line {
-  background-color: whilte;
+  background-color: white;
   border: none;
   box-shadow: none;
   border-bottom: solid 1px gray;
 }
 
 .form-line:focus {
-  border-color: $cerise;
+  border-color: $blue;
   border-width: 2px;
   box-shadow: none;
+}
+.form-title {
+  background: asset-url('polke.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 10px 0;
+  border-radius : 10px 10px 0 0;
+}
+
+.form-title h2 {
+  margin: 10px 20px;
+  color: white;
+  font-family: $body-font;
+}
+
+.icon-margin {
+  margin-left: 5px;
 }
 
 .card-form {
   background-color: white;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  padding: 20px 20px;
-  border-radius: 3px;
-  margin-top: 30px;
+  border-radius: 10px;
+  max-width: 320px;
+  margin: 30px auto;
 }
+
+.form-container {
+  padding: 20px;
+}
+
+.facebook-sign {
+  margin: 10px 0;
+  background-color: #4060B8;
+  border-radius : 4px;
+  width: fit-content;
+  padding: 5px 10px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+
+  p {
+    margin:0;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+.label-gray {
+  color: gray;
+  font-size: 15px;
+  padding-top: 1px;
+}
+
+.line-top {
+  margin-top: 10px;
+  border-top: solid 1px darkgray;
+}
+
+.facebook-sign:hover {
+  background-color: #3652a0;
+}
+
+.link-gray {
+  font-size: 15px;
+  margin-bottom: 15px;
+  color: gray;
+  a {
+    color: gray;
+  }
+
+  a:hover {
+    color : darkgray;
+  }
+}
+
+.input-margin {
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.form-actions {
+  margin: 10px 0px;
+  margin-bottom: 20px;
+}
+
+.user_password {
+  margin-bottom: 0px;
+}
+
+.user_user_name {
+  margin-bottom: 0px;
+}
+
+.text-muted {
+  color: gray;
+  font-size: 11px;
+}
+
