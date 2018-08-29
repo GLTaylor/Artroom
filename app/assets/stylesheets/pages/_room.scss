@@ -33,7 +33,6 @@
 }
 
 #save-room {
-  // padding: 13px 41px !important;
   cursor: pointer;
 }
 
@@ -51,9 +50,6 @@
   height: 45px;
   transition: all 0.3s ease-in-out;
   position: relative;
-  // padding: 10px 54px;
-  // display: flex;
-  // justify-content:space-around;
 
   span {
     width: 100%;
@@ -62,20 +58,15 @@
     position:absolute;
     top: 6px;
     left: 24px;
-    // position: absolute;
-    // margin-top: -11px;
     pointer-events: none;
     transition: all 0.3s ease-in-out;
   }
 
   nav {
-    // display: none;
-    // transition: all 0.3s ease-in-out;
     size: 0;
     opacity: 0;
     position:absolute;
-    // display: flex;
-    // justify-content:space-around;
+    z-index: 2;
   }
 
   a {
@@ -85,7 +76,6 @@
     opacity: 1;
     transition: all 0.3s ease-in-out;
     margin: 0px auto;
-    // color: #999999;
   }
 
   &:hover, &.hover {
