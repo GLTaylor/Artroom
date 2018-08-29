@@ -3,11 +3,12 @@
   text-align: center;
   height: calc(100vh - 70px);
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
-  background-size: cover !important;
+  background: image-url('polke.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: image-url('polke.jpg') no-repeat;
 
 }
 .banner h1 {
