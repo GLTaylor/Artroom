@@ -1,10 +1,15 @@
+.title-description-container{
+  display: inline-flex;
+
+}
 .no-text-decoration {
   color: inherit;
   transition: all .5s ease;
+  text-decoration: underline #C6C4C4;
 }
 
 .no-text-decoration:hover {
-  color: $cerise;
+  text-decoration: underline #C6C4C4;
 }
 
 .artwork-links {
@@ -14,21 +19,23 @@
   justify-content: space-around;
 }
 
-.line-separator{
-  height: 1px;
-  background: #717171;
-  border-bottom: 1px solid #E0E0E0;
-  margin-top: 45px;
-  margin-bottom: 11px;
-}
-
-.title h1{
-  font-size: 30px;
+.title{
+  font-size: 20px;
   text-align: left;
 }
 
-.date-and-name h3{
+.date-and-name{
   font-size: 19px;
   text-align: left;
   color: #C4C4C4;
+  margin-top: -3px;
+}
+
+.background-white{
+  background: $white;
+  height: 100vh;
+}
+
+.no-margin{
+  margin-bottom: -30px;
 }
