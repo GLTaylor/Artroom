@@ -1,10 +1,15 @@
+.title-description-container{
+  display: inline-flex;
+
+}
 .no-text-decoration {
   color: inherit;
   transition: all .5s ease;
+  text-decoration: underline #C6C4C4;
 }
 
 .no-text-decoration:hover {
-  color: $cerise;
+  text-decoration: underline #C6C4C4;
 }
 
 .artwork-links {
@@ -12,4 +17,25 @@
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
+
+.title{
+  font-size: 20px;
+  text-align: left;
+}
+
+.date-and-name{
+  font-size: 19px;
+  text-align: left;
+  color: #C4C4C4;
+  margin-top: -3px;
+}
+
+.background-white{
+  background: $white;
+  height: 100vh;
+}
+
+.no-margin{
+  margin-bottom: -30px;
 }

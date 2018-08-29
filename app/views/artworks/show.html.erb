@@ -1,31 +1,36 @@
-<div class="vertical-wrapper-white text-center">
-  <div class="container">
+
+<div class="wrapper-gray">
+  <div class="container text-center">
     <div class="row">
       <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
         <%= cl_image_tag @artwork.image, class: "image-resize image-rounded"%>
       </div>
     </div>
-    <div class="row">
-      <h1><%= @artwork.title %></h1>
-    </div>
-    <div class="row">
-      <%= link_to artist_path(@artwork.artist), class: "no-text-decoration" do  %>
-        <h3><%= @artwork.artist.name %></h3>
-      <% end %>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-        <p class="description-long text-justify"><%= @artwork.description %></p>
+  </div>
+</div>
+<div class="wrapper-white no-margin">
+  <div class="container">
+    <div class="title-description-container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4">
+          <h1 class="title"><%= @artwork.title %></h1>
+          <h3 class="date-and-name"><%= @artwork.date %></h3>
+          <%= link_to artist_path(@artwork.artist), class: "no-text-decoration" do  %>
+          <h3 class="date-and-name"><%= @artwork.artist.name %></h3>
+          <% end %>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-8">
+          <p class="description-long text-justify"><%= @artwork.description %></p>
+        </div>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12 col-sm-4 col-sm-offset-1 text-center">
-        <% if request.original_url.include?("?interest=") %>
-        <% end %>
+        <% if request.original_url.include?("interest=") %>
           <div class="button">
             <%= link_to "Something else", artworks_path(mood: params[:mood], interest: params[:interest], next_index: params[:next_index], index_start: params[:index_start] ), class: "button-outline button-gray" %>
           </div>
-
+        <% end %>
       </div>
       <div class="col-xs-12 col-sm-4 col-sm-offset-2 text-center">
         <% if current_user.present? %>
@@ -41,3 +46,4 @@
     </div>
   </div>
 </div>
+
