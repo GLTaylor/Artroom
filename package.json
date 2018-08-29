@@ -9,7 +9,8 @@
     "jquery": "^3.3.1",
     "popmotion": "^8.3.6",
     "pretty-checkbox": "^3.0.3",
-    "rails-ujs": "^5.2.1"
+    "rails-ujs": "^5.2.1",
+    "tether-drop": "^1.4.2"
   },
   "devDependencies": {
     "webpack-dev-server": "2.11.2"

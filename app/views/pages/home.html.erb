@@ -4,25 +4,22 @@
     <p> Discover Contemporary Art </p>
     <div class="quiz-container">
       <div class="quiz-card">
-        <div class="category-choices">
-        <%= form_tag artworks_path, method: :get do %>
-
-        <div class="dropdown">
-          <div class="select">
-            <span>Mood?</span>
-            <i class="fa fa-chevron-left"></i>
-          </div>
-          <%= hidden_field_tag(:mood)%>
-          <ul class="dropdown-menu">
-            <li id="poetic">Poetic</li>
-            <li id="wild">Wild</li>
-            <li id="joyful">Joyful</li>
-            <li id="humorous">Humorous</li>
-            <li id="melancholy">Melancholy</li>
-            <li id="meh">Meh</li>
-          </ul>
-        </div>
-
+        <%= form_tag artworks_path, method: :get, class: "category-choices" do %>
+            <div class="dropdown">
+              <div class="select">
+                <span>Mood?</span>
+                <i class="fa fa-chevron-left"></i>
+              </div>
+              <%= hidden_field_tag(:mood)%>
+              <ul class="dropdown-menu">
+                <li id="poetic">Poetic</li>
+                <li id="wild">Wild</li>
+                <li id="joyful">Joyful</li>
+                <li id="humorous">Humorous</li>
+                <li id="melancholy">Melancholy</li>
+                <li id="meh">Meh</li>
+              </ul>
+            </div>
         <div class="dropdown">
           <div class="select">
             <span>Interest?</span>
@@ -38,10 +35,10 @@
             <li id="politics">Politics</li>
           </ul>
         </div>
-
-          <%= submit_tag "Discover", id: "submit-button-quiz" %>
-            <% end %>
-        </div>
+          <div class="button-outline button-blue button-small-margin">
+            <%= submit_tag "Discover", id: "submit-button-quiz" %>
+              <% end %>
+          </div>
       </div>
     </div>
   </div>
