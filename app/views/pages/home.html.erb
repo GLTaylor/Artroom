@@ -2,49 +2,43 @@
   <div class="banner-content">
     <h1>WELCOME TO ARTROOM</h1>
     <p> Discover Contemporary Art </p>
-  </div>
-</div>
-<div class="quiz-container">
-  <div class="quiz-card">
-<!--     <div class=""> -->
-    <%= form_tag artworks_path, method: :get, class: "category-choices" do %>
-
-    <div class="dropdown">
-      <div class="select">
-        <span>Mood?</span>
-        <i class="fa fa-chevron-left"></i>
+      <div class="quiz-card">
+        <%= form_tag artworks_path, method: :get, class: "category-choices" do %>
+            <div class="dropdown dropdown-style">
+              <div class="select">
+                <span>Mood?</span>
+                <i class="fa fa-chevron-left"></i>
+              </div>
+              <%= hidden_field_tag(:mood)%>
+              <ul class="dropdown-menu">
+                <li id="poetic">Poetic</li>
+                <li id="wild">Wild</li>
+                <li id="joyful">Joyful</li>
+                <li id="humorous">Humorous</li>
+                <li id="melancholy">Melancholy</li>
+                <li id="meh">Meh</li>
+              </ul>
+            </div>
+        <div class="dropdown dropdown-style">
+          <div class="select">
+            <span>Interest?</span>
+            <i class="fa fa-chevron-left"></i>
+          </div>
+          <%= hidden_field_tag(:interest)%>
+          <ul class="dropdown-menu">
+            <li id="humanity">Humanity</li>
+            <li id="Nature">Nature</li>
+            <li id="tech">Tech</li>
+            <li id="death">Death</li>
+            <li id="sexuality">Sexuality</li>
+            <li id="politics">Politics</li>
+          </ul>
+        </div>
+          <div class="button-outline button-blue button-small-margin">
+            <%= submit_tag "Discover", id: "submit-button-quiz" %>
+              <% end %>
+          </div>
       </div>
-      <%= hidden_field_tag(:mood)%>
-      <ul class="dropdown-menu">
-        <li id="poetic">Poetic</li>
-        <li id="wild">Wild</li>
-        <li id="joyful">Joyful</li>
-        <li id="humorous">Humorous</li>
-        <li id="melancholy">Melancholy</li>
-        <li id="meh">Meh</li>
-      </ul>
-    </div>
-
-    <div class="dropdown">
-      <div class="select">
-        <span>Interest?</span>
-        <i class="fa fa-chevron-left"></i>
-      </div>
-      <%= hidden_field_tag(:interest)%>
-      <ul class="dropdown-menu">
-        <li id="humanity">Humanity</li>
-        <li id="Nature">Nature</li>
-        <li id="tech">Tech</li>
-        <li id="death">Death</li>
-        <li id="sexuality">Sexuality</li>
-        <li id="politics">Politics</li>
-      </ul>
-    </div>
-      <div class="button-outline button-blue button-small-margin">
-        <%= submit_tag "Discover", id: "submit-button-quiz" %>
-          <% end %>
-      </div>
-<!--     </div> -->
   </div>
 </div>
 
