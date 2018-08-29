@@ -30,6 +30,10 @@
   margin-right: 10px
 }
 
+.button-small-margin {
+  margin: 0px 10px;
+}
+
 .button-artwork {
   margin-bottom: 10px;
 }
@@ -38,50 +42,83 @@
   transform: scale(1.1);
 }
 
-.button-outline {
-  border : solid 2px;
-  border-radius: 50px;
-  padding: 10px 15px;
-}
-
-.button-small {
-  border : solid 1px;
-  border-radius: 50px;
-  padding: 5px 10px;
-  font-size: 12px;
-}
-
-.button-pink {
-  border-color: $cerise;
-  color: $cerise;
+#submit-button-quiz {
   position: relative;
-  -webkit-transition:0.4s all ease-in;
-  transition:0.4s ease-in all;
-
-  a {
-      color: $cerise;
-  }
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-size: 16px;
 }
 
-.button-pink:hover {
-  background-color: $cerise;
-  color: $white;
-  a {
-    color: $white;
-  }
+#submit-button-quiz:focus {
+  box-shadow: none;
+  outline : none;
 }
 
+
+.button-outline{
+  display:inline-block;
+  position:relative;
+  padding:10px 20px;
+  border:2px solid $black;
+  color: $black;
+  font-size:15px;
+  text-decoration:none;
+  background-color: transparent;
+  transition: color 0.4s
+}
+
+.button-outline:after{
+  content:" ";
+  border:2px solid transparent;
+  display:inline-block;
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  margin:auto;
+  transition:all 0.4s;
+  background-color: transparent;
+}
+
+.button-outline:hover:after{
+  border:2px solid $black;
+  width: calc(100% - 6px);
+  height: calc(100% + 15px);
+}
 
 .button-gray {
-  border-color: $dark-gray;
   color: $dark-gray;
-  position: relative;
-  -webkit-transition:0.4s all ease;
-  transition:0.4s ease all;
-  a {
-      color: $dark-gray;
+  border-color: $dark-gray;
+
+  &:hover {
+    color: $dark-gray;
+    border-color: $dark-gray;
+  }
+
+  &:hover:after {
+    border-color: $dark-gray;
   }
 }
+
+.button-blue {
+  color: $blue;
+  border-color: $blue;
+
+  &:hover {
+    color: $blue;
+    border-color: $blue;
+  }
+
+  &:hover:after {
+    border-color: $blue;
+  }
+}
+
 
 .button-gray-delete {
   border-color: $dark-gray;
@@ -97,12 +134,4 @@
     transform: rotate(-90deg);
 }
 
-
-.button-gray:hover {
-  background-color: $dark-gray;
-  color: $white;
-  a {
-    color: $white;
-  }
-}
 
