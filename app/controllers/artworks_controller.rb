@@ -25,13 +25,32 @@ class ArtworksController < ApplicationController
     private
 
     def redirect(artworks)
-      index = params[:next_index].to_i || 0
-      if index < artworks.length
+      p = Random.new
+      if params[:next_index].present?
+        start = false
+        index = params[:next_index].to_i
+        index_start = params[:index_start]
+      else
+        start = true
+        index = p.rand(artworks.length)
+        index_start = index
+      end
+      if index < (artworks.length - 1)
         @artwork = artworks[index]
         index = index + 1
-        redirect_to artwork_path(@artwork, mood: params[:mood], interest: params[:interest], next_index: index)
-      else
-        redirect_to no_matches_url
+        if params[:next_index] == index_start #bc the next index will never = 0
+          redirect_to no_matches_url
+        else
+          redirect_to artwork_path(@artwork, mood: params[:mood], interest: params[:interest], next_index: index, index_start: index_start)
+        end
+      elsif index == (artworks.length - 1)
+        @artwork = artworks[index]
+        index = 0
+        if params[:next_index] == index_start #bc the next index will never = 0
+          redirect_to no_matches_url
+        else
+         redirect_to artwork_path(@artwork, mood: params[:mood], interest: params[:interest], next_index: index, index_start: index_start)
+        end
       end
     end
 end
