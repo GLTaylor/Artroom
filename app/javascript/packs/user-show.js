@@ -4,6 +4,12 @@ import Rails from 'rails-ujs';
 // Rails.start();
 
   function dragMoveListener (event) {
+    let save = document.getElementById('save-room').children[1].classList
+    console.log(save['value']);
+    if (save['value'].includes('is-visible')) {
+      save.remove('is-visible');
+      document.getElementById('save-room').children[0].classList.remove('is-invisible');
+    };
     var target = event.target,
         // keep the dragged position in the data-x/data-y attributes
         x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx,
@@ -68,10 +74,13 @@ interact('.artblock')
 const saveButton = document.getElementById('save-room');
 if (saveButton) {
   saveButton.addEventListener("click", (event) => {
-    const artworksNodes = document.querySelectorAll('.artblock');
-    artworksNodes.forEach((artwork) => {
-     updateCoordinates(artwork);
-    })
+    // const artworksNodes = document.querySelectorAll('.artblock');
+    // artworksNodes.forEach((artwork) => {
+    //  updateCoordinates(artwork);
+    // })
+    console.log(event.currentTarget);
+    event.currentTarget.children[0].classList.add('is-invisible');
+    event.currentTarget.children[1].classList.add('is-visible');
   });
 };
 
