@@ -30,6 +30,10 @@
   margin-right: 10px
 }
 
+.button-small-margin {
+  padding-bottom: 1px;
+}
+
 .button-artwork {
   margin-bottom: 10px;
 }
@@ -46,6 +50,12 @@
   text-transform: uppercase;
   font-size: 16px;
 }
+
+#submit-button-quiz:focus {
+  box-shadow: none;
+  outline : none;
+}
+
 
 .button-outline{
   display:inline-block;

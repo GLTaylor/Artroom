@@ -6,8 +6,8 @@
 </div>
 <div class="quiz-container">
   <div class="quiz-card">
-    <div class="category-choices">
-    <%= form_tag artworks_path, method: :get do %>
+<!--     <div class=""> -->
+    <%= form_tag artworks_path, method: :get, class: "category-choices" do %>
 
     <div class="dropdown">
       <div class="select">
@@ -40,11 +40,11 @@
         <li id="politics">Politics</li>
       </ul>
     </div>
-      <div class="button-outline button-blue">
+      <div class="button-outline button-blue button-small-margin">
         <%= submit_tag "Discover", id: "submit-button-quiz" %>
           <% end %>
       </div>
-    </div>
+<!--     </div> -->
   </div>
 </div>
 
