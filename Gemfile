@@ -10,8 +10,6 @@ gem 'puma'
 gem 'rails', '5.2.1'
 gem 'redis'
 gem 'cloudinary'
-# gem 'platform-api', git: 'https://github.com/jalada/platform-api', branch: 'master'
-# gem 'letsencrypt-rails-heroku', group: 'production'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
