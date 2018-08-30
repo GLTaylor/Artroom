@@ -74,11 +74,10 @@ interact('.artblock')
 const saveButton = document.getElementById('save-room');
 if (saveButton) {
   saveButton.addEventListener("click", (event) => {
-    // const artworksNodes = document.querySelectorAll('.artblock');
-    // artworksNodes.forEach((artwork) => {
-    //  updateCoordinates(artwork);
-    // })
-    console.log(event.currentTarget);
+    const artworksNodes = document.querySelectorAll('.artblock');
+    artworksNodes.forEach((artwork) => {
+     updateCoordinates(artwork);
+    })
     event.currentTarget.children[0].classList.add('is-invisible');
     event.currentTarget.children[1].classList.add('is-visible');
   });
