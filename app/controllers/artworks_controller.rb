@@ -25,32 +25,46 @@ class ArtworksController < ApplicationController
     private
 
     def redirect(artworks)
-      p = Random.new
-      if params[:next_index].present?
-        start = false
-        index = params[:next_index].to_i
-        index_start = params[:index_start]
-      else
-        start = true
-        index = p.rand(artworks.length)
-        index_start = index
-      end
-      if index < (artworks.length - 1)
-        @artwork = artworks[index]
-        index = index + 1
-        if params[:next_index] == index_start #bc the next index will never = 0
+      # set array a = 0..artworks.length - 1
+      # take random index like below
+      # @artwork = artworks[index]
+      # remove current index from the array
+      # sample array again on the shorter array until it's empty
+      # if / when array is empty, redirect to no matches
+      # p = Random.new
+      if !params[:art_array].nil?
+
+        art_array = params[:art_array]
+
+        if art_array == "end"
           redirect_to no_matches_url
-        else
-          redirect_to artwork_path(@artwork, mood: params[:mood], interest: params[:interest], next_index: index, index_start: index_start)
+        elsif !art_array.blank?
+          index = art_array.sample
+          @artwork = artworks[index.to_i]
+          art_array.delete(index)
+
+          if art_array.empty?
+            art_array = "end"
+          end
+          redirect_to artwork_path(@artwork, mood: params[:mood], interest: params[:interest], index: index, art_array: art_array)
+
         end
-      elsif index == (artworks.length - 1)
-        @artwork = artworks[index]
-        index = 0
-        if params[:next_index] == index_start #bc the next index will never = 0
-          redirect_to no_matches_url
+      else
+        range = (0...artworks.length)
+        art_array = range.to_a
+        if art_array.any?
+          index = art_array.sample
+          @artwork = artworks[index.to_i]
+          art_array.delete(index)
+
+          if art_array.empty?
+            art_array = "end"
+          end
+          redirect_to artwork_path(@artwork, mood: params[:mood], interest: params[:interest], index: index, art_array: art_array)
         else
-         redirect_to artwork_path(@artwork, mood: params[:mood], interest: params[:interest], next_index: index, index_start: index_start)
+          redirect_to no_matches_url
         end
       end
     end
+
 end

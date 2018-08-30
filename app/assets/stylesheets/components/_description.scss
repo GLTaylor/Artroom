@@ -10,7 +10,36 @@ a.morelink:hover {
 
 .morecontent span {
   display: none;
+  transition: all 0.9s ease-out;
+
 }
+
+.expandable-text {
+  transition: all 0.9s ease-in-out;
+}
+
 .hide-me {
   display: none;
+  transition: all 0.9s ease-in-out;
+
 }
+
+.select-me.active {
+    transform: rotate(-180deg);
+    transition: 0.9s;
+}
+
+
+.select-me {
+  color: $dark-gray;
+  -webkit-transition:0.3s all ease;
+  transition:0.3s ease all;
+}
+
+.select-me:hover {
+    color: $black;
+    transition: 0.9s;
+}
+
+
+
