@@ -59,12 +59,16 @@
             </li>
           </ul>
           <ul class = "list artwork-description">
-            <li class = "list artwork-category">
-              <p><strong>Category: </strong><%= artwork.category %></p>
-            </li>
-            <li class = "list artwork-medium">
-              <p><strong>Medium: </strong><%= artwork.medium %></p>
-            </li>
+            <% if artwork.category.present? %>
+              <li class = "list artwork-category">
+                <p><strong>Category: </strong><%= artwork.category %></p>
+              </li>
+            <% end %>
+            <% if artwork.medium.present? %>
+              <li class = "list artwork-medium">
+                <p><strong>Medium: </strong><%= artwork.medium %></p>
+              </li>
+            <% end %>
           </ul>
         </div>
         <% end %>
