@@ -24,3 +24,9 @@
   color: rgb(255, 255, 255);
   margin-bottom: 30px;
 }
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

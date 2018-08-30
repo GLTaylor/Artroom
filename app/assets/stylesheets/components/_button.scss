@@ -119,6 +119,35 @@
   }
 }
 
+.button-bcg-white {
+  background-color: $white;
+}
+
+.button-bcg-white:after {
+  background-color: $white;
+}
+
+.button-bcg-white:before{
+  content:" ";
+  border:2px solid transparent;
+  display:inline-block;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  position:absolute;
+  top:-2px;
+  left:-2px;
+  right:-2px;
+  bottom:-2px;
+  margin:auto;
+  transition:all 0.4s;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.button-bcg-white:hover:before {
+  border-color: $blue;
+}
+
 
 .button-gray-delete {
   border-color: $dark-gray;
