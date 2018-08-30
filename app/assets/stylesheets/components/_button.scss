@@ -13,6 +13,19 @@
   color: white;
 }
 
+.artwork-links-small p {
+  margin: 0
+}
+
+p .link-blue {
+  color: $blue;
+  transition: all .3s ease-in;
+}
+
+p .link-blue:hover {
+  color: $black;
+}
+
 .button {
   height: auto;
   margin: 20px 0px;

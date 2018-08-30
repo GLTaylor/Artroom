@@ -65,9 +65,9 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: -webkit-linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0) 68%, rgba(255,255,255,1) 100%);
-  background: -o-linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0) 68%, rgba(255,255,255,1) 100%);
-  background: linear-gradient(rgba(255,255,255,0) 0%, rgba(255,255,255,0) 68%, rgba(255,255,255,1) 100%);
+  background: -webkit-linear-gradient(rgba(254,254,254,0) 0%, rgba(255,255,255,0.84) 65%, rgba(255,255,255,1) 100%);
+  background: -o-linear-gradient(rgba(254,254,254,0) 0%, rgba(255,255,255,0.84) 65%, rgba(255,255,255,1) 100%);
+  background: linear-gradient(rgba(254,254,254,0) 0%, rgba(255,255,255,0.84) 65%, rgba(255,255,255,1) 100%);
   display: flex;
   justify-content: center;
   align-items: flex-end;
