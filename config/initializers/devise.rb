@@ -262,6 +262,7 @@ Devise.setup do |config|
     scope: 'email',
     info_fields: 'email, first_name',
     image_size: 'square',  # 50x50, guaranteed ratio
+    callback_url: "https://www.artroom.fun",
     secure_image_url: true
 
   # ==> Warden configuration
