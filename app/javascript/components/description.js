@@ -3,7 +3,8 @@ const description = document.querySelector('.description-long');
 if (description) {
     const showChar = 300;
     const ellipsestext = "...";
-    const readtext = '<i class="fab fa-readme"></i>'
+    let readtext = '<i class="fas fa-angle-right select-me"></i>'
+    // let hidetext = '<i class="fas fa-angle-left select-me-too hide-me"></i>'
     let content = description.innerHTML;
 
     if (content.length > showChar) {
@@ -17,13 +18,13 @@ if (description) {
 
   const showMore = document.querySelector('.morelink');
   showMore.addEventListener("click", (event) => {
-    a = document.querySelector(".expandable-text")
+    let a = document.querySelector(".expandable-text")
     a.classList.toggle('morecontent');
-    b = document.querySelector(".ellipses-option")
+    let b = document.querySelector(".ellipses-option")
     b.classList.toggle('hide-me');
+    let d = document.querySelector(".select-me")
+    d.classList.toggle('active');
     event.preventDefault();
   });
 }
 }
-
-
