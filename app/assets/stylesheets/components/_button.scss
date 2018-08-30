@@ -55,7 +55,8 @@ p .link-blue:hover {
 }
 
 .button-margin-10 {
-  margin-right: 10px
+  margin-right: 10px;
+  margin-top: 5px;
 }
 
 .button-small-margin {
@@ -174,16 +175,16 @@ p .link-blue:hover {
 
 
 .button-gray-delete {
-  border-color: $dark-gray;
-  color: $dark-gray;
+  border-color: $white;
+  color: $white;
   position: relative;
   -webkit-transition:0.3s all ease;
   transition:0.3s ease all;
 }
 
 .button-gray-delete:hover > i {
-    color: white;
-    transition: 0.9s;
+    color: $cerise;
+    transition: 0.7s;
     transform: rotate(-90deg);
 }
 
