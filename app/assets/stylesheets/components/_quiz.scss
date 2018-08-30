@@ -1,13 +1,14 @@
 .quiz-card {
-  margin-top: 60px;
-  min-width: 60%;
-  min-height: 80px;
-  background-color: $white;
-  // border: solid 3px $blue;
+  margin: 60px auto;
+  width: 100%;
+  min-height: 70px;
+  background: rgba(244, 244, 244, 0.7);
+  // box-shadow: inset 0px 0px 30px $blue;
+  // border: solid 2px $black;
   display: flex;
   border-radius: 2px;
   justify-content: center;
-  padding: 5px 30px;
+  // padding: 0px 20px;
 }
 /* Dropdown Button */
 .dropbtn {
@@ -30,8 +31,9 @@
   width: 160px;
   display: inline-block;
   background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 2px $blue;
+  border-radius: 2px;
+  border: solid 2px $blue;
+  // box-shadow: 0 0 2px $black;
   transition: all .5s ease;
   position: relative;
   font-size: 15px;
@@ -41,12 +43,14 @@
 }
 .dropdown-style .select {
     cursor: pointer;
-    display: block;
-    padding: 10px;
-    font-size: 22px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 18px;
 }
 .dropdown-style .select > i {
-    font-size: 20px;
+    font-size: 18px;
     color: $blue;
     cursor: pointer;
     transition: all .3s ease-in-out;
@@ -63,7 +67,7 @@
 .dropdown-style.active:hover,
 .dropdown-style.active {
     box-shadow: 0 0 4px $blue;
-    border-radius: 5px 5px 0 0;
+    border-radius:2px 2px 0 0;
     background-color: #fff;
 }
 .dropdown-style.active .select > i {
@@ -80,7 +84,9 @@
     position: absolute;
     background-color: #fff;
     width: 100%;
-    left: 0;
+    border: solid 2px $blue;
+    border-top: 0px;
+    left: -2px;
     margin-top: 1px;
     box-shadow: 0 0 2px $blue;
     border-radius: 0 1px 5px 5px;
@@ -89,8 +95,12 @@
     max-height: 144px;
     overflow-y: auto;
     z-index: 9
-
 }
+
+ul .dropdown-menu {
+  width: 150px;
+}
+
 .dropdown-style .dropdown-menu li {
     padding: 7px;
     transition: all .2s ease-in-out;
