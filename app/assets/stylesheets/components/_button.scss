@@ -18,12 +18,27 @@
 }
 
 p .link-blue {
-  color: $blue;
-  transition: all .3s ease-in;
+  color: $black;
+  font-family: $body-font;
+  font-weight: ligher;
+  transition: color .4s ease
+}
+
+p .link-blue:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: $blue;
+  transition: width .4s ease;
+}
+
+p .link-blue:hover:after {
+    width: 100%;
 }
 
 p .link-blue:hover {
-  color: $black;
+  color: $blue;
 }
 
 .button {
@@ -49,10 +64,6 @@ p .link-blue:hover {
 
 .button-artwork {
   margin-bottom: 10px;
-}
-
-.button-artwork:hover {
-  transform: scale(1.1);
 }
 
 #submit-button-quiz {
