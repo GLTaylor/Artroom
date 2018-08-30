@@ -13,8 +13,11 @@
       <div class="room-options">
       <% if @user == current_user %>
         <h1 class="room-title">My room</h1>
-                <div class="button-options">
-          <p id="save-room" class="button-outline button-gray button-margin">SAVE</p>
+        <div class="button-options">
+          <p id="save-room" class="button-outline button-gray button-margin">
+            <span class="save-span">SAVE</span>
+            <span class="save-icon">Saved <i class="fas fa-check"></i></span>
+          </p>
           <div class="share button-outline button-blue button-margin">
             <span>SHARE</span>
             <nav>
