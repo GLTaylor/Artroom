@@ -18,12 +18,27 @@
 }
 
 p .link-blue {
-  color: $blue;
-  transition: all .3s ease-in;
+  color: $black;
+  font-family: $body-font;
+  font-weight: ligher;
+  transition: color .4s ease
+}
+
+p .link-blue:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: $blue;
+  transition: width .4s ease;
+}
+
+p .link-blue:hover:after {
+    width: 100%;
 }
 
 p .link-blue:hover {
-  color: $black;
+  color: $blue;
 }
 
 .button {
@@ -40,7 +55,8 @@ p .link-blue:hover {
 }
 
 .button-margin-10 {
-  margin-right: 10px
+  margin-right: 10px;
+  margin-top: 5px;
 }
 
 .button-small-margin {
@@ -49,10 +65,6 @@ p .link-blue:hover {
 
 .button-artwork {
   margin-bottom: 10px;
-}
-
-.button-artwork:hover {
-  transform: scale(1.1);
 }
 
 #submit-button-quiz {
@@ -163,16 +175,16 @@ p .link-blue:hover {
 
 
 .button-gray-delete {
-  border-color: $dark-gray;
-  color: $dark-gray;
+  border-color: $white;
+  color: $white;
   position: relative;
   -webkit-transition:0.3s all ease;
   transition:0.3s ease all;
 }
 
 .button-gray-delete:hover > i {
-    color: white;
-    transition: 0.9s;
+    color: $cerise;
+    transition: 0.7s;
     transform: rotate(-90deg);
 }
 

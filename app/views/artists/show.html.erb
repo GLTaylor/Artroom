@@ -44,8 +44,12 @@
             <%= cl_image_tag artwork.image, class: "card-artworks" %>
             <div class="artwork-hover-light">
               <div class="artwork-links-small">
-                <p><%= link_to "More" ,artwork_path(artwork), class: "link-blue"%></p>
-                <p><%= link_to "Hang", "/artworks/#{artwork.id}/hangings", method: :post, class: "link-blue"  %></p>
+                <p>
+                  <%= link_to "More" ,artwork_path(artwork), class: "link-blue"%>
+                </p>
+                <p>
+                  <%= link_to "Hang", "/artworks/#{artwork.id}/hangings", method: :post, class: "link-blue"  %>
+                  </p>
               </div>
             </div>
           </div>
