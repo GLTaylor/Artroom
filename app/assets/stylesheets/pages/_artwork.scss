@@ -1,4 +1,5 @@
 .title-description-container{
+  width: 100%;
   display: inline-flex;
 
 }
@@ -62,4 +63,9 @@
 
 .description-long{
   margin-top: 15px;
+}
+
+.vh-100-container {
+  margin-top: 20px;
+  height: calc(100vh - 95px);
 }
