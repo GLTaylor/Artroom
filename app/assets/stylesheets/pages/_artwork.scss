@@ -32,11 +32,23 @@
   text-align: left;
 }
 
-.date-and-name{
+.date{
   font-size: 19px;
   text-align: left;
   color: #C4C4C4;
   margin-top: -3px;
+}
+
+.artist-name-color {
+  font-size: 19px;
+  text-align: left;
+  color: #C4C4C4;
+  margin-top: -3px;
+  transition: all .3s ease-in;
+}
+
+.artist-name-color:hover {
+  color: #848383;
 }
 
 .background-white{
