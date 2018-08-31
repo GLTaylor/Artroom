@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
   get "no_matches", to: "pages#no_matches"
+  get "about", to: "pages#about"
   resources :artworks, only: [:index, :show] do
     resources :hangings, only: [:create]
   end
