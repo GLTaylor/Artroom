@@ -1,7 +1,7 @@
 class ArtistPolicy < ApplicationPolicy
 
   def show?
-    user.present?
+    true
   end
 
   class Scope < Scope
