@@ -1,10 +1,10 @@
 .vertical-wrapper-white {
   position: relative;
-  width: 100%;
-  height: calc(100vh - 75px);
   margin: auto;
   background-color: $white;
   z-index: 1;
+  width: fit-content;
+  min-height: calc(100vh - 145px);
 }
 
 .vertical-wrapper-room-white {
