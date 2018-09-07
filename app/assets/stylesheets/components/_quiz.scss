@@ -1,3 +1,4 @@
+
 .quiz-card {
   margin: 60px auto;
   width: 100%;
@@ -7,7 +8,9 @@
   // border: solid 2px $black;
   display: flex;
   border-radius: 2px;
+  flex-wrap: wrap;
   justify-content: center;
+
   // padding: 0px 20px;
 }
 /* Dropdown Button */
@@ -25,6 +28,7 @@
   align-items: center;
   flex-direction: row;
 }
+
 
 /*Styling Selectbox for those sleek dropdowns*/
 .dropdown-style {

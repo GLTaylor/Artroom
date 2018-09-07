@@ -13,3 +13,16 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+@media (max-width: 500px) {
+   .category-choices {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 15px;
+   }
+
+  .dropdown-style {
+    margin-bottom: 9px;
+  }
+
+}
