@@ -20,8 +20,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem "pundit"
 gem 'omniauth-facebook'
-gem 'activeadmin', github: 'activeadmin/activeadmin'
-gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'activeadmin', git: 'git@github.com:activeadmin/activeadmin.git', branch: 'master'
+gem 'inherited_resources', git: 'git@github.com:activeadmin/inherited_resources', branch: 'master'
 gem 'carrierwave', '~> 1.2'
 
 group :development do
