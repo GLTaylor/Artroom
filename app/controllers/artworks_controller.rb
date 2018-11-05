@@ -1,20 +1,23 @@
 class ArtworksController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
-    if params[:mood].present? && params[:interest].present?
-      @artworks = Artwork.search_by_mood(params[:mood]).search_by_interest(params[:interest])
-      redirect(@artworks)
-    elsif params[:interest].present? && params[:mood] == ""
-      @artworks = Artwork.search_by_interest(params[:interest])
-      redirect(@artworks)
-    elsif params[:mood].present? && params[:interest] == ""
-      @artworks = Artwork.search_by_mood(params[:mood])
-      redirect(@artworks)
-    elsif params[:mood] == "" && params[:interest] == ""
-      @artworks = Artwork.all
-      redirect(@artworks)
+    if params[:interest].present?
+      if params[:mood].present?
+        @artworks = Artwork.search_by_mood(params[:mood]).search_by_interest(params[:interest])
+      else
+        @artworks = Artwork.search_by_interest(params[:interest])
+      end
+    else # no interest param given
+      if params[:mood].present?
+        @artworks = Artwork.search_by_mood(params[:mood])
+      else
+        @artworks = Artwork.all
+      end
     end
+
     authorize @artworks
+    redirect @artworks
   end
 
   def show
