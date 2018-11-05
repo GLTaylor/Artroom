@@ -17,7 +17,17 @@ class ArtworksController < ApplicationController
     end
 
     authorize @artworks
-    redirect @artworks
+
+    respond_to do |format|
+      format.html { redirect @artworks }
+      format.json do
+        render json: [ # TODO: fetch data from DB instead of these dummy values
+          {title: 'unknown',  artist: 'unknown'},
+          {title: 'some art', artist: 'you'},
+          {title: 'add more', artist: 'art here...'},
+        ]
+      end
+    end
   end
 
   def show
