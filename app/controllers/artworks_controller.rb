@@ -12,7 +12,15 @@ class ArtworksController < ApplicationController
       redirect(@artworks)
     elsif params[:mood] == "" && params[:interest] == ""
       @artworks = Artwork.all
-      redirect(@artworks)
+
+      respond_to do |format|
+        format.html { redirect(@artworks) }
+        format.json do
+          raise "We got here!"
+          authorize @artworks
+          render json: @artworks
+        end
+      end
     end
     authorize @artworks
   end
