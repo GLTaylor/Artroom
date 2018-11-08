@@ -1,28 +1,33 @@
 class ArtworksController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  def index
-    if params[:mood].present? && params[:interest].present?
-      @artworks = Artwork.search_by_mood(params[:mood]).search_by_interest(params[:interest])
-      redirect(@artworks)
-    elsif params[:interest].present? && params[:mood] == ""
-      @artworks = Artwork.search_by_interest(params[:interest])
-      redirect(@artworks)
-    elsif params[:mood].present? && params[:interest] == ""
-      @artworks = Artwork.search_by_mood(params[:mood])
-      redirect(@artworks)
-    elsif params[:mood] == "" && params[:interest] == ""
-      @artworks = Artwork.all
 
-      respond_to do |format|
-        format.html { redirect(@artworks) }
-        format.json do
-          raise "We got here!"
-          authorize @artworks
-          render json: @artworks
-        end
+  def index
+    if params[:interest].present?
+      if params[:mood].present?
+        @artworks = Artwork.search_by_mood(params[:mood]).search_by_interest(params[:interest])
+      else
+        @artworks = Artwork.search_by_interest(params[:interest])
+      end
+    else # no interest param given
+      if params[:mood].present?
+        @artworks = Artwork.search_by_mood(params[:mood])
+      else
+        @artworks = Artwork.all
       end
     end
+
     authorize @artworks
+
+    respond_to do |format|
+      format.html { redirect @artworks }
+      format.json do
+        render json: [ # TODO: fetch data from DB instead of these dummy values
+          {title: 'unknown',  artist: 'unknown'},
+          {title: 'some art', artist: 'you'},
+          {title: 'add more', artist: 'art here...'},
+        ]
+      end
+    end
   end
 
   def show
