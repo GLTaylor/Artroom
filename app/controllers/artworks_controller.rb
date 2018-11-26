@@ -21,11 +21,27 @@ class ArtworksController < ApplicationController
     respond_to do |format|
       format.html { redirect @artworks }
       format.json do
-        render json: [ # TODO: fetch data from DB instead of these dummy values
-          {title: 'unknown',  artist: 'unknown'},
-          {title: 'some art', artist: 'you'},
-          {title: 'add more', artist: 'art here...'},
-        ]
+        # render json: [ # TODO: fetch data from DB instead of these dummy values
+        render json: @artworks.to_json(
+          only: [:title, :artist, :mood, :interest, :image ],
+          include: { artist: { only: [:name] } }
+
+          )
+          # {title: :title, artist: :artist, id: :id}
+
+
+       #  render json:
+       # @artworks.each do |artwork|
+       #   { artwork => { title: artwork.title, artist: artwork.artist }.to_json.html_safe }
+       # end
+
+        #   {title: 'unknown',  artist: 'unknown'},
+        #   {title: 'some art', artist: 'you'},
+        #   {title: 'add more', artist: 'art here...'},
+        # ]
+         # @artworks.each do |artwork|
+         #    {title: artwork.title,  artist: artwork.artist},
+         #  end
       end
     end
   end
@@ -38,13 +54,11 @@ class ArtworksController < ApplicationController
     private
 
     def redirect(artworks)
-      # set array a = 0..artworks.length - 1
+      # set array artworks.length - 1
       # take random index like below
-      # @artwork = artworks[index]
       # remove current index from the array
       # sample array again on the shorter array until it's empty
       # if / when array is empty, redirect to no matches
-      # p = Random.new
       if !params[:art_array].nil?
 
         art_array = params[:art_array]
