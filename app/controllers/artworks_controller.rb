@@ -1,20 +1,32 @@
 class ArtworksController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
-    if params[:mood].present? && params[:interest].present?
-      @artworks = Artwork.search_by_mood(params[:mood]).search_by_interest(params[:interest])
-      redirect(@artworks)
-    elsif params[:interest].present? && params[:mood] == ""
-      @artworks = Artwork.search_by_interest(params[:interest])
-      redirect(@artworks)
-    elsif params[:mood].present? && params[:interest] == ""
-      @artworks = Artwork.search_by_mood(params[:mood])
-      redirect(@artworks)
-    elsif params[:mood] == "" && params[:interest] == ""
-      @artworks = Artwork.all
-      redirect(@artworks)
+    if params[:interest].present?
+      if params[:mood].present?
+        @artworks = Artwork.search_by_mood(params[:mood]).search_by_interest(params[:interest])
+      else
+        @artworks = Artwork.search_by_interest(params[:interest])
+      end
+    else # no interest param given
+      if params[:mood].present?
+        @artworks = Artwork.search_by_mood(params[:mood])
+      else
+        @artworks = Artwork.all
+      end
     end
+
     authorize @artworks
+
+    respond_to do |format|
+      format.html { redirect @artworks }
+      format.json do
+        render json: @artworks.to_json(
+          only: [:title, :artist, :mood, :interest, :image ],
+          include: { artist: { only: [:name] } }
+          )
+      end
+    end
   end
 
   def show
@@ -25,13 +37,11 @@ class ArtworksController < ApplicationController
     private
 
     def redirect(artworks)
-      # set array a = 0..artworks.length - 1
+      # set array artworks.length - 1
       # take random index like below
-      # @artwork = artworks[index]
       # remove current index from the array
       # sample array again on the shorter array until it's empty
       # if / when array is empty, redirect to no matches
-      # p = Random.new
       if !params[:art_array].nil?
 
         art_array = params[:art_array]
@@ -66,5 +76,4 @@ class ArtworksController < ApplicationController
         end
       end
     end
-
 end
