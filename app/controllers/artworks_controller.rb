@@ -21,11 +21,12 @@ class ArtworksController < ApplicationController
     respond_to do |format|
       format.html { redirect @artworks }
       format.json do
+        skip_authorization
         render json: @artworks.to_json(
           only: [:title, :artist, :mood, :interest, :image ],
-          include: { artist: { only: [:name] } }
+          include: { artist: { only: [:name] } },
+          status: :ok
           )
-        authorize @artworks
       end
     end
   end
