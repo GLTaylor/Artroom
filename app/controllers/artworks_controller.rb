@@ -25,6 +25,7 @@ class ArtworksController < ApplicationController
           only: [:title, :artist, :mood, :interest, :image ],
           include: { artist: { only: [:name] } }
           )
+        authorize @artworks
       end
     end
   end
